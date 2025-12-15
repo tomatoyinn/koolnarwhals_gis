@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home || Kool Narwhals</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward_ios" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript  -->
+    <script src="jiva.js" defer></script>
+    <!-- Google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..900;1,6..72,200..900&family=Pacifico&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap (for layout only) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="fevicon.jpg" type="image/jpeg">
+</head>
+
+<body class="home-root">
+    <nav class="glass-nav">
+        <div class="nav-item">
+            <a href="#" style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-house-door"></i>
+                <span class="nav-text">Home</span>
+            </a>
+        </div>
+        <div class="nav-item dropdown-parent">
+            <a href="plant_page1.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-file-earmark-text"></i>
+                <span class="nav-text">Content</span>
+            </a>
+            <div class="dropdown">
+                <ul class="dropdown-list">
+                    <li><a href="plant_page1.html">Plants</a></li>
+                    <li><a href="environmental2.html">Environmental Layers</a></li>
+                    <li><a href="GIS.html">What is GIS?</a></li>
+                    <li><a href="GIS_plant.html">GIS Map</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="aboutus.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-info-circle"></i>
+                <span class="nav-text">About Us</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="aboutus.html#contact-us"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-envelope"></i>
+                <span class="nav-text">Contact</span>
+            </a>
+        </div>
+        <div class="nav-auth">
+            <a href="signin.html" class="auth-btn sign-button">Sign Up</a>
+            <a href="login.html" class="auth-btn login-btn">Log In</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <br>
+
+    <div class="main-box" style="margin-top: 8%;">
+        <div class="d-flex justify-content-center flex-wrap mb-4">
+            <div class="tag-pill">Explore</div>
+            <div class="tag-pill">Sustainable</div>
+            <div class="tag-pill">Parks</div>
+            <div class="tag-pill">Play</div>
+        </div>
+
+        <h1 class="hero-title">Play, Connect<br>Explore the Parks</h1>
+
+        <p class="hero-sub">
+            Geographic<br>Information<br>System
+        </p>
+
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <button class="cta-btn cta-green"><a href="GIS_plant.html" style="text-decoration: none; color: black;">See
+                    More</a></button>
+            <button class="cta-btn cta-dark"><a href="GIS.html" style="text-decoration: none; color: white;">What is
+                    GIS?</a></button>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <img src="img/img1.png" class="bottom-image" alt="">
+        </div>
+    </div>
+
+    <section class="why-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-5 why-text">
+                    <h2>
+                        Why We Chose GIS: Making Planting Smarter and More Sustainable
+                    </h2>
+                </div>
+
+                <div class="col-lg-7">
+                    <p>
+                        Planting and gardening are more than just putting seeds in the ground—they require careful
+                        planning to make sure plants grow healthy and strong. Using a GIS (Geographic Information
+                        System) allows us to analyze sunlight, soil types, and space to make smarter planting decisions.
+                    </p>
+                    <a href="aboutus.html" class="about-link mt-5">About us →</a>
+                </div>
+            </div>
+
+            <div class="why-img">
+                <img src="img/planting3.jpg" alt="Planting" />
+            </div>
+
+            <div class="row why-stats text-center mt-5">
+                <div class="col-6 col-md-3 mt-3">
+                    <h3>85%</h3>
+                    <p>plants thrived with GIS-based planning.</p>
+                </div>
+
+                <div class="col-6 col-md-3 mt-3">
+                    <h3>20%</h3>
+                    <p>less water used</p>
+                </div>
+
+                <div class="col-6 col-md-3 mt-3">
+                    <h3>20 - 30%</h3>
+                    <p>of fertilizer being reduced</p>
+                </div>
+
+                <div class="col-6 col-md-3 mt-3">
+                    <h3>20 - 30%</h3>
+                    <p>manage time and labor better</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- What we offer start -->
+    <section class="impact-section container">
+        <div class="impact-hero">
+            <div class="container text-center">
+                <p class="impact-subtitle">What we offer is</p>
+                <h2 class="impact-title">The Best Choice For<br>Your Plants</h2>
+            </div>
+        </div>
+
+        <div class="container impact-cards-wrapper">
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <img src="img/plant6.jpg" alt="Smart planting">
+                        </div>
+                        <h5 class="impact-card-title">Smart Planting Guidance</h5>
+                        <p class="impact-card-text">
+                            Get recommendations for the best spots to plant based on sunlight, soil type, and spacing.
+                            Your plants have the best chance to thrive!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <img src="img/plant7.jpg" alt="Plant database">
+                        </div>
+                        <h5 class="impact-card-title">Plant Database</h5>
+                        <p class="impact-card-text">
+                            Explore a variety of plants and find out which ones grow best in your area or garden type.
+                            Learn about their needs and characteristics.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <img src="img/plant8.jpg" alt="Map">
+                        </div>
+                        <h5 class="impact-card-title">Map</h5>
+                        <p class="impact-card-text">
+                            Visualize your garden or park layout with interactive maps. See exactly where each plant
+                            should go for optimal growth.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <img src="img/plant9.jpg" alt="Plant information">
+                        </div>
+                        <h5 class="impact-card-title">Plant information</h5>
+                        <p class="impact-card-text">
+                            Discover detailed information about different plants, including the sunlight, soil, and
+                            space they need to grow best.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- What we offer end -->
+
+    <!-- Main feature of our website start -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-5 feature-content">
+                    <h1 class="feature-title">
+                        Main feature:<br>
+                        <span>Simulated GIS Tool</span>
+                    </h1>
+
+                    <p class="feature-description">
+                        Our Virtual GIS Plant Finder is an interactive tool that simulates how a real GIS system works
+                        for planting. You can explore which plants grow best based on conditions like water type, soil
+                        moisture, sunlight, and space.
+                        <br>
+                        <br>
+                        Although it’s a mock-up version, it helps you visualize, plan, and experiment with planting
+                        layouts—making gardening smarter and more fun!
+                    </p>
+
+                    <div class="feature-actions">
+                        <a href="GIS_plant.html" class="btn"
+                            style=" background: #4a4040; color: #fff; padding: 10px 26px; border-radius: 30px;font-size: 14px;">Get
+                            Started</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="feature-media">
+                        <div class="feature-media-main">
+                            <img src="img/GIS-demo.png" alt="Our GIS System-1">
+
+                            <span class="feature-tag top-left">Easy to use</span>
+                            <span class="feature-tag center">Effective</span>
+                            <span class="feature-tag bottom-right">Free to use</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main feature of our website end -->
+
+    <!-- Plant pages start -->
+    <section id="plants" class="feature-plants-cool">
+        <div class="container">
+            <div class="feature-plants-header">
+                <h2>Explore Different Types of Plants</h2>
+                <p>
+                    Thoughtfully selected plants with care tips,
+                    growth guidance, and sustainability insights.
+                </p>
+            </div>
+
+            <div class="feature-plants-layout">
+                <a href="plant_page1.html" class="feature-plant-featured">
+                    <img src="img/type-1.jpg" alt="Plant 1">
+                    <div class="feature-plant-overlay">
+                        <span>Featured Plant</span>
+                        <h3>Plant Type-1</h3>
+                    </div>
+                </a>
+
+                <a href="plant_page2.html" class="feature-plant-mini">
+                    <img src="img/sandy-soil3.avif" alt="Plant 2">
+                    <h4>Plant Type-2</h4>
+                    <p class="feature-plant-spec">Full Sun + Dry + Sandy Soil Plants</p>
+                </a>
+
+                <a href="plant_page3.html" class="feature-plant-mini">
+                    <img src="img/type-2.jpg" alt="Plant 3">
+                    <h4>Plant Type-3</h4>
+                    <p class="feature-plant-spec">Partial Sun + Moderate Moisture + Loamy Soil Plants</p>
+                </a>
+
+                <a href="plant_page4.html" class="feature-plant-mini">
+                    <img src="img/type-4.jpg" alt="Plant 4">
+                    <h4>Plant Type-4</h4>
+                    <p class="feature-plant-spec">Shade + Moist + Groundwater-Fed Plants</p>
+                </a>
+
+                <a href="plant_page5.html" class="feature-plant-mini">
+                    <img src="img/type-5.webp" alt="Plant 5">
+                    <h4>Plant Type-5</h4>
+                    <p class="feature-plant-spec">Full Sun + Wet + Surface Water + Clay Soil Plants</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Plant pages end -->
+
+    <!-- Review start -->
+    <header class="review-header">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-5 col-md-6 col-12 container_left">
+                    <h1 class="review-title">Read what our customers love about us</h1>
+                    <p class="review-para">
+                        Discover how our GIS platform is helping communities understand their environment better, make
+                        smarter planning decisions, and improve local parks through clear data and thoughtful design.
+                    </p>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-lg-5 col-md-6 col-12 container_right">
+                    <!-- Review 1 -->
+                    <div class="card mb-3">
+                        <div class="card-body d-flex align-items-start">
+                            <img src="img/tempo_pfp1.jpg" alt="Profile picture of User One" class="rounded-circle me-3">
+                            <span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
+                            <div class="card_details">
+                                <p class="fst-italic text-muted mb-2 review-messages">
+                                    Using this GIS website really changed how we plan our local park improvements. The
+                                    environmental layers made it easy to see which plants suit our soil and sunlight
+                                    conditions.
+                                </p>
+                                <h4 class="text-end fw-bold">- Aye Chan M</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="card mb-3">
+                        <div class="card-body d-flex align-items-start">
+                            <img src="img/tempo_pfp2.jpg" alt="Profile picture of User Two" class="rounded-circle me-3">
+                            <span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
+                            <div class="card_details">
+                                <p class="fst-italic text-muted mb-2 review-messages">
+                                    The GIS system was very easy to understand, even for beginners. The maps and plant
+                                    information helped our team design a more sustainable park layout for our school
+                                    project.
+                                </p>
+                                <h4 class="text-end fw-bold">- Min Khant S.</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="card mb-3">
+                        <div class="card-body d-flex align-items-start">
+                            <img src="img/tempo_pfp3.jpg" alt="Profile picture of User Three"
+                                class="rounded-circle me-3">
+                            <span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
+                            <div class="card_details">
+                                <p class="fst-italic text-muted mb-2 review-messages">
+                                    I liked how the website shows the relationship between plants, environment, and park
+                                    health. It helped our community group choose better plants for a small neighborhood
+                                    park.
+                                </p>
+                                <h4 class="text-end fw-bold">- Thiri L.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Review end -->
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Footer start -->
+    <div class="footer">
+        <footer class="footer-custom mt-5 pt-5 pb-3"
+            style="border-top-left-radius: 30px; border-top-right-radius: 30px;">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-3">
+                        <h5 class="fw-bold footer-headings">Explore & Learn</h5>
+                        <ul class="list-unstyled footer-list">
+                            <li><a href="index.html" class="text-decoration-none">Home</a></li>
+                            <li><a href="aboutus.HTML" target="_blank" class="text-decoration-none">About Us</a></li>
+                            <li><a href="#" class="text-decoration-none">GIS System</a></li>
+                            <li><a href="environmental2.html" class="text-decoration-none">Environmental layers</a></li>
+                            <li><a href="environmental2.html#plants-filter-section" class="text-decoration-none">Plants
+                                    details</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5 class="fw-bold footer-headings">Plant Categories</h5>
+                        <ul class="list-unstyled footer-list">
+                            <li><a href="plant_page4.html" class="text-decoration-none">Shaded</a></li>
+                            <li><a href="plant_page5.html" class="text-decoration-none">Surface Water</a></li>
+                            <li><a href="review.html" class="text-decoration-none">Reviews</a></li>
+                            <li><a href="aboutus.html#FAQs" class="text-decoration-none">FAQ</a></li>
+                            <li><a href="reference.html" class="text-decoration-none">References</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="signtext mb-1">Sign up to news & updates</p>
+
+                        <form action="">
+                            <input type="text" id="fullName" name="fullName" placeholder="Full Name"
+                                class="mt-2 name-input" style="color: white;">
+
+                            <div class="email-box mt-3">
+                                <input type="text" id="email" name="email" placeholder="Email address"
+                                    class="email-input">
+                                <button class="signup-btn">Sign up</button>
+                            </div>
+                        </form>
+
+                        <div class="social-media mt-4">
+                            <p class="signtext">Find us on social media</p>
+                            <div class="social-icons">
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-tiktok"></i>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                        </div>
+
+                        <div class="contact-info" style="margin-top: 30px;">
+                            <p class="signtext">Get in touch</p>
+                            <div class="phone-no" style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-regular fa-address-book" style="font-size: 18px;"></i>
+                                <span style="line-height: 1; font-size: 16px;">+95 909008120</span>
+                            </div>
+                            <div class="mail mt-2" style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-regular fa-envelope" style="font-size: 18px;"></i>
+                                <span style="line-height: 1; font-size: 16px;">koolnarwhals.edu@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="small-message-container mt-5">
+                    <span class="small-message">&copy; 2025 Kool Narwhals - Helping you explore, plant, and protect our green spaces.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Footer end -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector(".hamburger");
+            const nav = document.querySelector(".glass-nav");
+            const dropdowns = document.querySelectorAll(".dropdown-parent");
+            hamburger.addEventListener("click", () => {
+                nav.classList.toggle("open");
+            });
+
+            dropdowns.forEach(parent => {
+                parent.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    const dropdown = parent.querySelector(".dropdown");
+                    dropdown.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
