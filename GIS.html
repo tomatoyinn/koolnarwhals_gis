@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is GIS? || Kool Narwhals</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward_ios" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript  -->
+    <script src="jiva.js" defer></script>
+    <!-- Google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..900;1,6..72,200..900&family=Pacifico&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap (for layout only) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="fevicon.jpg" type="image/jpeg">
+</head>
+
+<body class="home-root">
+    <nav class="glass-nav">
+        <div class="nav-item">
+            <a href="index.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-house-door"></i>
+                <span class="nav-text">Home</span>
+            </a>
+        </div>
+        <div class="nav-item dropdown-parent">
+            <a href="plant_page1.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-file-earmark-text"></i>
+                <span class="nav-text">Content</span>
+            </a>
+            <div class="dropdown">
+                <ul class="dropdown-list">
+                    <li><a href="plant_page1.html">Plants</a></li>
+                    <li><a href="environmental2.html">Environmental Layers</a></li>
+                    <li><a href="GIS.html">What is GIS?</a></li>
+                    <li><a href="GIS_plant.html">GIS Map</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="aboutus.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-info-circle"></i>
+                <span class="nav-text">About Us</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="aboutus.html#contact-us"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-envelope"></i>
+                <span class="nav-text">Contact</span>
+            </a>
+        </div>
+        <div class="nav-auth">
+            <a href="signin.html" class="auth-btn sign-button">Sign Up</a>
+            <a href="login.html" class="auth-btn login-btn">Log In</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <br>
+    <br>
+
+    <div class="container mt-5">
+        <div class="gis-container">
+            <h4 class="text-center">The real definition of</h4>
+            <h1 class="text-center mt-2 mb-4">GIS and Its Benefits</h1>
+        </div>
+    </div>
+
+    <div class="container gis-info-section">
+        <div class="gis-info-row">
+            <div class="gis-info-image-card">
+                <img src="img/Gis_and_plant12.webp" alt="GIS Diagram">
+            </div>
+
+            <div class="gis-info-text-card">
+                <h2>What Really is GIS?</h2>
+                <ul>
+                    <li class="gis-li">
+                        GIS, or <span class="highlight">Geographic Information System</span>, is a technology that
+                        allows us to collect, store,
+                        analyze, and visualize data that is related to geographic locations. By combining maps and
+                        data, GIS helps us understand patterns, relationships, and trends in the world around us.
+                    </li>
+
+                    <li class="mt-4 gis-li">
+                        From urban planning to environmental conservation, GIS provides critical insights to make
+                        informed decisions. It integrates data from satellites, drones, sensors, and surveys into
+                        a digital map, making complex information easier to understand.
+                    </li>
+
+                    <li class="mt-4 gis-li">
+                        GIS is not only a tool for professionals but also a way for communities to engage with
+                        local projects, like revitalizing parks, managing resources, or tracking environmental changes.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container gis-steps-section">
+        <h2 class="text-center mb-5">How GIS Works</h2>
+        <div class="gis-steps">
+            <div class="gis-step-card">
+                <i class="fa-solid fa-satellite-dish step-icon"></i>
+                <h5>Data Collection</h5>
+                <p>Information is collected from satellites, drones, and sensors.</p>
+            </div>
+            <div class="gis-step-card">
+                <i class="fa-solid fa-database step-icon"></i>
+                <h5>Data Storage</h5>
+                <p>All geographic information is stored in a digital database.</p>
+            </div>
+            <div class="gis-step-card">
+                <i class="fa-solid fa-chart-line step-icon"></i>
+                <h5>Data Analysis</h5>
+                <p>GIS analyzes spatial data to identify patterns and trends.</p>
+            </div>
+            <div class="gis-step-card">
+                <i class="fa-solid fa-lightbulb step-icon"></i>
+                <h5>Decision Making</h5>
+                <p>Helps make informed decisions for planning and environmental projects.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container gis-interactive-section mb-5">
+        <h2 class="text-center mt-5 mb-4">GIS Applications</h2>
+        <div class="gis-accordion">
+
+            <div class="gis-accordion-card">
+                <div class="gis-accordion-header">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h5>Urban Planning</h5>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="gis-accordion-content text-center">
+                    <p>GIS helps city planners map traffic, utilities, and land use to make smarter decisions for
+                        infrastructure and development.</p>
+                    <div class="circle-images">
+                        <div class="row mt-5 mb-5">
+                            <div class="col-md-2">
+                                <img src="img2/traffic.jpg" alt="Traffic">
+                            </div>
+
+                            <div class="col-md-2">
+                                <img src="img2/natural-disaster.webp" alt="Natural disaster">
+                            </div>
+
+                            <div class="col-md-2">
+                                <img src="img/GIS2.jpg" alt="GIS">
+                            </div>
+
+                            <div class="col-md-2">
+                                <img src="img/Gis_and_plant12.webp" alt="Plants">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gis-accordion-card">
+                <div class="gis-accordion-header">
+                    <i class="fa-solid fa-water"></i>
+                    <h5>Environmental Management</h5>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="gis-accordion-content text-center">
+                    <p>Monitor forests, water bodies, and wildlife habitats. GIS helps protect ecosystems and track
+                        environmental changes.
+                    </p>
+                    <div class="circle-images">
+                        <div class="row mt-5 mb-5">
+                            <div class="col-md-2">
+                                <img src="img/forest.png" alt="Forest">
+                            </div>
+
+                            <div class="col-md-2">
+                                <img src="img2/water.jpg" alt="Water">
+                            </div>
+
+                            <div class="col-md-2">
+                                <img src="img/ecosystem.jpg" alt="Ecosystem">
+                            </div>
+
+                            <div class="col-md-2">
+                                <img src="img2/wildlife.jpg" alt="Wildlife">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gis-accordion-card">
+                <div class="gis-accordion-header">
+                    <i class="fa-solid fa-truck"></i>
+                    <h5>Logistics & Transport</h5>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="gis-accordion-content text-center">
+                    <p>Analyze routes, optimize deliveries, and manage fleets efficiently using GIS mapping and spatial
+                        data.
+                    </p>
+                    <div class="circle-images">
+                        <div class="row mt-5 mb-5">
+                            <div class="col-md-2">
+                                <img src="img/GIS dashbaord.png" alt="GIS Dashboard">
+                            </div>
+
+                            <div class="col-md-2">
+                                <img src="img2/vehicle.jpg" alt="Vehicles connection">
+                            </div>
+
+                            <div class="col-md-2">
+                                <img src="img/logistic map.jpg" alt="Logistic map">
+                            </div>
+
+                            <div class="col-md-2">
+                                <img src="img/delivery.jpg" alt="Delivery">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container lastgis-section mt-5">
+        <div class="row g-4">
+            <div class="col-md-7">
+                <div class="lastgis-card">
+                    <img src="img1/park-12.jpg" alt="Park-1">
+                    <div class="lastgis-overlay"></div>
+                    <div class="lastgis-card-content">
+                        <h4>Disaster Preparedness</h4>
+                        <p>GIS maps areas prone to floods, fires, or storms, helping emergency teams plan routes and
+                            respond faster.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="lastgis-card">
+                    <img src="img1/park-13.jpg" alt="Park-2">
+                    <div class="lastgis-overlay"></div>
+                    <div class="lastgis-card-content">
+                        <h4>Environmental Conservation</h4>
+                        <p>GIS monitors deforestation, pollution, and wildlife habitats, helping protect the environment
+                            effectively.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="lastgis-card">
+                    <img src="img1/park-14.webp" alt="Park-3">
+                    <div class="lastgis-overlay"></div>
+                    <div class="lastgis-card-content">
+                        <h4>Smart Traffic & Transit</h4>
+                        <p>GIS analyzes traffic patterns and public transport routes, helping reduce congestion and plan
+                            better cities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="lastgis-card">
+                    <img src="img1/park-15.jpg" alt="Park-4">
+                    <div class="lastgis-overlay"></div>
+                    <div class="lastgis-card-content">
+                        <h4>Health Tracking</h4>
+                        <p>GIS tracks disease outbreaks and hotspots, allowing efficient allocation of health resources
+                            and interventions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container gis-modal-section mt-5">
+        <h2 class="text-center" style="margin-top: 80px;">How GIS Helps with Planting in Parks</h2>
+        <div class="gis-card-section">
+            <div class="gis-card">
+                <h4>Smart Layout</h4>
+                <p>Optimal planting locations based on sunlight & soil.</p>
+                <button class="open-modal" data-modal="modal1">&#8594;</button>
+            </div>
+
+            <div class="gis-card">
+                <h4>Plant Selection</h4>
+                <p>Choose suitable plant species for each area.</p>
+                <button class="open-modal" data-modal="modal2">&#8594;</button>
+            </div>
+
+            <div class="gis-card">
+                <h4>Monitoring & Maintenance</h4>
+                <p>Track plant health, watering, and growth patterns.</p>
+                <button class="open-modal" data-modal="modal3">&#8594;</button>
+            </div>
+
+            <div class="gis-card">
+                <h4>Community Engagement</h4>
+                <p>GIS helps involve locals in planting decisions.</p>
+                <button class="open-modal" data-modal="modal4">&#8594;</button>
+            </div>
+
+            <div class="gis-card">
+                <h4>Resource Optimization</h4>
+                <p>Efficient use of water, fertilizers, and manpower.</p>
+                <button class="open-modal" data-modal="modal5">&#8594;</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content"><span class="close">&times;</span>
+            <div class="modal-circle">1</div>
+            <h3>Smart Layout</h3>
+            <p>GIS maps the park and recommends the best spots for planting based on sunlight, soil type,
+                and spacing requirements.
+            </p>
+            <hr class="mb-4">
+            <div class="enviro-carousel container">
+                <div class="enviro-group">
+                    <!-- First -->
+                    <div class="photo-card"><img src="img1/soiltype.jpeg" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img2/watering3.jpg" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img1/spacing.jpg" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img2/sunlight.jpg" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/planting_in_park1.jpeg" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/planting_in_park2.jpg" alt="Photo 6"></div>
+                    <!-- Second -->
+                    <div class="photo-card"><img src="img/soiltype.jpeg" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/watering3.jpg" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/spacing.jpg" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/sunlight.jpg" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/planting_in_park1.jpeg" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/planting_in_park2.jpg" alt="Photo 6"></div>
+                    <!-- Third -->
+                    <div class="photo-card"><img src="img/soiltype.jpeg" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/watering3.jpg" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/spacing.jpg" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/sunlight.jpg" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/planting_in_park1.jpeg" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/planting_in_park2.jpg" alt="Photo 6"></div>
+                </div>
+            </div>
+            <hr class="mb-4 mt-4">
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content"><span class="close">&times;</span>
+            <div class="modal-circle">2</div>
+            <h3>Plant Selection</h3>
+            <p>GIS analyzes the environment and suggests suitable plants for each section to improve
+                biodiversity.
+            </p>
+            <hr class="mb-4">
+            <div class="enviro-carousel container">
+                <div class="enviro-group">
+                    <!-- First -->
+                    <div class="photo-card"><img src="img/eco-friendly.webp" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/planting.jpg" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/biodiversity.avif" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/weather.webp" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/family_planting.jpg" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/environment.jpg" alt="Photo 6"></div>
+                    <!-- Second -->
+                    <div class="photo-card"><img src="img/eco-friendly.webp" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/planting.jpg" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/biodiversity.avif" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/weather.webp" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/family_planting.jpg" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/environment.jpg" alt="Photo 6"></div>
+                    <!-- Third -->
+                    <div class="photo-card"><img src="img/eco-friendly.webp" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/planting.jpg" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/biodiversity.avif" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/weather.webp" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/family_planting.jpg" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/environment.jpg" alt="Photo 6"></div>
+                </div>
+            </div>
+            <hr class="mb-4 mt-4">
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content"><span class="close">&times;</span>
+            <div class="modal-circle">3</div>
+            <h3>Monitoring & Maintenance</h3>
+            <p>GIS tracks plant health, watering schedules, and growth, making maintenance easier for
+                park
+                management.
+            </p>
+            <hr class="mb-4">
+            <div class="enviro-carousel container">
+                <div class="enviro-group">
+                    <!-- First -->
+                    <div class="photo-card"><img src="img/plant_health.webp" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/park_management.jpg" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/growth.jpg" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/fertilizer.jpg" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/park_watering.png" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/park_maintenance.jpg" alt="Photo 6"></div>
+                    <!-- Second -->
+                    <div class="photo-card"><img src="img/plant_health.webp" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/park_management.jpg" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/growth.jpg" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/fertilizer.jpg" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/park_watering.png" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/park_maintenance.jpg" alt="Photo 6"></div>
+                    <!-- Third -->
+                    <div class="photo-card"><img src="img/plant_health.webp" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/park_management.jpg" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/growth.jpg" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/fertilizer.jpg" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/park_watering.png" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/park_maintenance.jpg" alt="Photo 6"></div>
+                </div>
+            </div>
+            <hr class="mb-4 mt-4">
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content"><span class="close">&times;</span>
+            <div class="modal-circle">4</div>
+            <h3>Community Engagement</h3>
+            <p>GIS encourages locals to participate in planting and maintaining park areas, increasing
+                awareness and
+                sustainability.
+            </p>
+            <hr class="mb-4">
+            <div class="enviro-carousel container">
+                <div class="enviro-group">
+                    <!-- First -->
+                    <div class="photo-card"><img src="img/community_and_park1.jpeg" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/community_and_park2.webp" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/community_and_park3.jpg" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/community_and_park4.jpg" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/community_and_park5.jpeg" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/community_and_park6.jpg" alt="Photo 6"></div>
+                    <!-- Second -->
+                    <div class="photo-card"><img src="img/community_and_park1.jpeg" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/community_and_park2.webp" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/community_and_park3.jpg" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/community_and_park4.jpg" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/community_and_park5.jpeg" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/community_and_park6.jpg" alt="Photo 6"></div>
+                    <!-- Third -->
+                    <div class="photo-card"><img src="img/community_and_park1.jpeg" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/community_and_park2.webp" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/community_and_park3.jpg" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/community_and_park4.jpg" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/community_and_park5.jpeg" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/community_and_park6.jpg" alt="Photo 6"></div>
+                </div>
+            </div>
+            <hr class="mb-4 mt-4">
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content"><span class="close">&times;</span>
+            <div class="modal-circle mt-5">5</div>
+            <h3>Resource Optimization</h3>
+            <p>GIS helps optimize water usage, fertilizer application, and manpower for efficient park
+                management.
+            </p>
+            <hr class="mb-4">
+            <div class="enviro-carousel container">
+                <div class="enviro-group">
+                    <!-- First -->
+                    <div class="photo-card"><img src="img/water_usage.webp" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/fertilizer.webp" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/planting2.webp" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/park_management2.jpeg" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/park_management3.jpg" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/park_management4.jpg" alt="Photo 6"></div>
+                    <!-- Second -->
+                    <div class="photo-card"><img src="img/water_usage.webp" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/fertilizer.webp" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/planting2.webp" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/park_management2.jpeg" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/park_management3.jpg" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/park_management4.jpg" alt="Photo 6"></div>
+                    <!-- Third -->
+                    <div class="photo-card"><img src="img/water_usage.webp" alt="Photo 1"></div>
+                    <div class="photo-card"><img src="img/fertilizer.webp" alt="Photo 2"></div>
+                    <div class="photo-card"><img src="img/planting2.webp" alt="Photo 3"></div>
+                    <div class="photo-card"><img src="img/park_management2.jpeg" alt="Photo 4"></div>
+                    <div class="photo-card"><img src="img/park_management3.jpg" alt="Photo 5"></div>
+                    <div class="photo-card"><img src="img/park_management4.jpg" alt="Photo 6"></div>
+                </div>
+            </div>
+            <hr class="mb-4 mt-4">
+        </div>
+    </div>
+
+    <!-- Footer start -->
+    <div class="footer">
+        <footer class="footer-custom mt-5 pt-5 pb-3"
+            style="border-top-left-radius: 30px; border-top-right-radius: 30px;">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-3">
+                        <h5 class="fw-bold footer-headings">Explore & Learn</h5>
+                        <ul class="list-unstyled footer-list">
+                            <li><a href="index.html" class="text-decoration-none">Home</a></li>
+                            <li><a href="aboutus.HTML" target="_blank" class="text-decoration-none">About Us</a></li>
+                            <li><a href="#" class="text-decoration-none">GIS System</a></li>
+                            <li><a href="environmental2.html" class="text-decoration-none">Environmental layers</a></li>
+                            <li><a href="environmental2.html#plants-filter-section" class="text-decoration-none">Plants
+                                    details</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5 class="fw-bold footer-headings">Plant Categories</h5>
+                        <ul class="list-unstyled footer-list">
+                            <li><a href="plant_page4.html" class="text-decoration-none">Shaded</a></li>
+                            <li><a href="plant_page5.html" class="text-decoration-none">Surface Water</a></li>
+                            <li><a href="review.html" class="text-decoration-none">Reviews</a></li>
+                            <li><a href="aboutus.html#FAQs" class="text-decoration-none">FAQ</a></li>
+                            <li><a href="reference.html" class="text-decoration-none">References</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="signtext mb-1">Sign up to news & updates</p>
+
+                        <form action="">
+                            <input type="text" id="fullName" name="fullName" placeholder="Full Name"
+                                class="mt-2 name-input" style="color: white;">
+
+                            <div class="email-box mt-3">
+                                <input type="text" id="email" name="email" placeholder="Email address"
+                                    class="email-input">
+                                <button class="signup-btn">Sign up</button>
+                            </div>
+                        </form>
+
+                        <div class="social-media mt-4">
+                            <p class="signtext">Find us on social media</p>
+                            <div class="social-icons">
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-tiktok"></i>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                        </div>
+
+                        <div class="contact-info" style="margin-top: 30px;">
+                            <p class="signtext">Get in touch</p>
+                            <div class="phone-no" style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-regular fa-address-book" style="font-size: 18px;"></i>
+                                <span style="line-height: 1; font-size: 16px;">+95 909008120</span>
+                            </div>
+                            <div class="mail mt-2" style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-regular fa-envelope" style="font-size: 18px;"></i>
+                                <span style="line-height: 1; font-size: 16px;">koolnarwhals.edu@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="small-message-container mt-5">
+                    <span class="small-message">&copy; 2025 Kool Narwhals - Helping you explore, plant, and protect our green spaces.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Footer end -->
+    </div>
+
+    <script>
+        const accordionHeaders = document.querySelectorAll('.gis-accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const toggleIcon = header.querySelector('.toggle-icon');
+
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                    toggleIcon.textContent = '+';
+                } else {
+                    document.querySelectorAll('.gis-accordion-content').forEach(c => c.style.display = 'none');
+                    document.querySelectorAll('.toggle-icon').forEach(icon => icon.textContent = '+');
+
+                    content.style.display = 'block';
+                    toggleIcon.textContent = '-';
+                }
+            });
+        });
+
+        const openButtons = document.querySelectorAll('.open-modal');
+        const modals = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.close');
+
+        openButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modalId = btn.getAttribute('data-modal');
+                document.getElementById(modalId).style.display = 'flex';
+            });
+        });
+
+        closeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.parentElement.parentElement.style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', (e) => {
+            modals.forEach(modal => {
+                if (e.target === modal) modal.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>

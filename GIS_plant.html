@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GIS planting system || Kool Narwhals</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Javascript -->
+    <script src="jiva.js" defer></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap (for layout only) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="fevicon.jpg" type="image/jpeg">
+</head>
+
+<body class="home-root">
+    <nav class="glass-nav">
+        <div class="nav-item">
+            <a href="index.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-house-door"></i>
+                <span class="nav-text">Home</span>
+            </a>
+        </div>
+        <div class="nav-item dropdown-parent">
+            <a href="plant_page1.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-file-earmark-text"></i>
+                <span class="nav-text">Content</span>
+            </a>
+            <div class="dropdown">
+                <ul class="dropdown-list">
+                    <li><a href="plant_page1.html">Plants</a></li>
+                    <li><a href="environmental2.html">Environmental Layers</a></li>
+                    <li><a href="GIS.html">What is GIS?</a></li>
+                    <li><a href="GIS_plant.html">GIS Map</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="aboutus.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-info-circle"></i>
+                <span class="nav-text">About Us</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="aboutus.html#contact-us"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-envelope"></i>
+                <span class="nav-text">Contact</span>
+            </a>
+        </div>
+        <div class="nav-auth">
+            <a href="signin.html" class="auth-btn sign-button">Sign Up</a>
+            <a href="login.html" class="auth-btn login-btn">Log In</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+
+    <!-- main box -->
+    <section id="splants">
+        <div class="pg-mainbox" role="main" aria-label="Plant GIS main area">
+            <div class="pg-hero">
+                <h1 class="pg-hero-title">Planting GIS</h1>
+                <div class="pg-hero-sub">Click a marker to jump to the plant card. Click a card to center its marker.
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="pg-layout" role="region" aria-label="Map and plant list layout">
+
+                <!-- LEFT: MAP -->
+                <div class="pg-map-wrap" aria-hidden="false">
+                    <div id="pg-map" class="pg-map" role="application" aria-label="Interactive plant map"></div>
+
+                    <div class="pg-stats" id="pg-stats" role="status" aria-live="polite">
+                        <div class="pg-st-row">Total species: <strong id="pg-total">0</strong></div>
+                        <div class="pg-st-row">Visible pins: <strong id="pg-visible">0</strong></div>
+                        <div class="pg-st-row">Selected: <strong id="pg-selected">—</strong></div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: PANEL (search + filters + cards) -->
+                <aside class="pg-panel" aria-label="Plant information panel">
+                    <input id="pg-search" class="pg-search" placeholder="Search plant name, soil, region..."
+                        aria-label="Search plants" />
+
+                    <div class="pg-pill-row" aria-hidden="false">
+                        <div class="pg-pill" data-filter="All">All</div>
+                        <div class="pg-pill" data-filter="Hot">Hot</div>
+                        <div class="pg-pill" data-filter="Mid">Mid</div>
+                        <div class="pg-pill" data-filter="Cold">Cold</div>
+                        <div class="pg-pill" data-filter="Rare">Rare</div>
+                    </div>
+
+                    <div class="pg-card-scroll" id="pg-card-scroll" tabindex="0" aria-label="Plant cards list">
+                        <!-- JS will render cards here -->
+                    </div>
+
+                    <div class="pg-footer">
+                        <button id="pg-reset" class="btn"
+                            style="background:var(--pg-cta-green);border-radius:18px;padding:.4rem .9rem;border:none">Reset</button>
+                    </div>
+                </aside>
+
+            </div>
+            <!-- INFO TABS -->
+            <div class="info-tabs-wrap">
+
+                <!-- Tabs buttons -->
+                <div class="info-tabs-nav">
+                    <button class="info-tab-btn active" data-tab="tab-overview">What is GIS?</button>
+                    <button class="info-tab-btn" data-tab="tab-soil">The Purpose of GIS</button>
+                    <button class="info-tab-btn" data-tab="tab-season">How Planting Relates to GIS</button>
+                    <button class="info-tab-btn" data-tab="tab-gis">Why Fruits & Medical Plants?</button>
+                </div>
+
+                <!-- Tabs content -->
+                <div class="info-tabs-content">
+
+                    <div class="info-tab-panel active" id="tab-overview">
+                        <h3 class="info-tab-title">Geographic Information System</h3>
+                        <p class="info-tab-text">
+                            GIS (Geographic Information System) is a digital mapping system used to collect, display,
+                            and
+                            analyze information based on location. On this page, GIS helps users understand where
+                            plants,
+                            paths, soil types, and other park features are located, even without prior background
+                            knowledge.
+                        </p>
+                    </div>
+
+                    <div class="info-tab-panel" id="tab-soil">
+                        <h3 class="info-tab-title">What is the purpose of using GIS?</h3>
+                        <p class="info-tab-text">
+                            The purpose of this GIS page is to visually show important features, issues, and
+                            opportunities
+                            within the park. By using mapped data, we can analyze the area more clearly and make
+                            informed
+                            decisions to improve park design, sustainability, and usability.
+                        </p>
+                    </div>
+
+                    <div class="info-tab-panel" id="tab-season">
+                        <h3 class="info-tab-title">How does 'Planting' relate to GIS?</h3>
+                        <p class="info-tab-text">
+                            Since we are focusing on local parks, planting is closely connected to GIS. GIS allows us to
+                            match plant types with suitable conditions such as sunlight, soil, and water availability.
+                            This
+                            helps ensure plants grow well, reduces maintenance problems, and supports better long-term
+                            park
+                            management.
+                        </p>
+                    </div>
+
+                    <div class="info-tab-panel" id="tab-gis">
+                        <h3 class="info-tab-title">Why did we go for fruits and medical plants?</h3>
+                        <p class="info-tab-text">
+                            We suggested fruit and medicinal plants instead of flowers because they provide practical,
+                            long-term benefits. According to FAO and public garden studies, edible and medicinal plants
+                            in
+                            urban green spaces can support food security, community health, and environmental
+                            sustainability. Flowers mainly serve decorative purposes and often require frequent
+                            replanting,
+                            while fruit and medicinal plants continue to benefit the community over time through food,
+                            traditional medicine, and educational value.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="#splants" class="back-home-btn">
+        Go back
+    </a>
+
+    <!-- Footer start -->
+    <div class="footer" style="margin-top: 67.6767667676767676767px;">
+        <footer class="footer-custom mt-5 pt-5 pb-3"
+            style="border-top-left-radius: 30px; border-top-right-radius: 30px;">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-3">
+                        <h5 class="fw-bold footer-headings">Explore & Learn</h5>
+                        <ul class="list-unstyled footer-list">
+                            <li><a href="index.html" class="text-decoration-none">Home</a></li>
+                            <li><a href="aboutus.HTML" target="_blank" class="text-decoration-none">About Us</a></li>
+                            <li><a href="#" class="text-decoration-none">GIS System</a></li>
+                            <li><a href="environmental2.html" class="text-decoration-none">Environmental layers</a></li>
+                            <li><a href="environmental2.html#plants-filter-section" class="text-decoration-none">Plants
+                                    details</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5 class="fw-bold footer-headings">Plant Categories</h5>
+                        <ul class="list-unstyled footer-list">
+                            <li><a href="plant_page4.html" class="text-decoration-none">Shaded</a></li>
+                            <li><a href="plant_page5.html" class="text-decoration-none">Surface Water</a></li>
+                            <li><a href="review.html" class="text-decoration-none">Reviews</a></li>
+                            <li><a href="aboutus.html#FAQs" class="text-decoration-none">FAQ</a></li>
+                            <li><a href="reference.html" class="text-decoration-none">References</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="signtext mb-1">Sign up to news & updates</p>
+
+                        <form action="">
+                            <input type="text" id="fullName" name="fullName" placeholder="Full Name"
+                                class="mt-2 name-input" style="color: white;">
+
+                            <div class="email-box mt-3">
+                                <input type="text" id="email" name="email" placeholder="Email address"
+                                    class="email-input">
+                                <button class="signup-btn">Sign up</button>
+                            </div>
+                        </form>
+
+                        <div class="social-media mt-4">
+                            <p class="signtext">Find us on social media</p>
+                            <div class="social-icons">
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-tiktok"></i>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                        </div>
+
+                        <div class="contact-info" style="margin-top: 30px;">
+                            <p class="signtext">Get in touch</p>
+                            <div class="phone-no" style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-regular fa-address-book" style="font-size: 18px;"></i>
+                                <span style="line-height: 1; font-size: 16px;">+95 909008120</span>
+                            </div>
+                            <div class="mail mt-2" style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-regular fa-envelope" style="font-size: 18px;"></i>
+                                <span style="line-height: 1; font-size: 16px;">koolnarwhals.edu@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="small-message-container mt-5">
+                    <span class="small-message">&copy; 2025 Kool Narwhals - Helping you explore, plant, and protect our green spaces.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Footer end -->
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        const PG_PLANTS = [
+            /* 20 Hot */
+            { id: 1, name: "Mango", type: "Fruit Tree", soil: "Loamy soil", region: "Mandalay, Sagaing", edible: "Edible", funfact: "Mango trees can bear fruit for decades.", img: "plants2/mango.png", weather: "Hot", lat: 21.979, lng: 96.086 },
+            { id: 2, name: "Watermelon", type: "Vine Fruit", soil: "Sandy soil", region: "Mandalay, Meiktila", edible: "Edible", funfact: "Watermelons are ~92% water.", img: "plants2/watermelon.png", weather: "Hot", lat: 21.915, lng: 95.995 },
+            { id: 3, name: "Papaya", type: "Tropical Fruit", soil: "Sandy loam", region: "Magway, Ayeyarwady", edible: "Edible", funfact: "Papaya grows very quickly.", img: "plants2/papaya.png", weather: "Hot", lat: 20.185, lng: 94.886 },
+            { id: 4, name: "Banana", type: "Herbaceous Fruit", soil: "Rich loamy soil", region: "Ayeyarwady, Yangon", edible: "Edible", funfact: "Banana plants are actually giant herbs.", img: "plants2/banana.png", weather: "Hot", lat: 16.842, lng: 96.173 },
+            { id: 5, name: "Lime", type: "Citrus", soil: "Well-drained loam", region: "Delta Region", edible: "Edible", funfact: "Limes used in many Myanmar dishes.", img: "plants2/lime.png", weather: "Hot", lat: 16.776, lng: 96.151 },
+            { id: 6, name: "Tamarind", type: "Leguminous Tree", soil: "Dry sandy soil", region: "Central Dry Zone", edible: "Edible", funfact: "Tamarind trees can live many decades.", img: "plants2/tamarind.png", weather: "Hot", lat: 20.030, lng: 95.690 },
+            { id: 7, name: "Coconut", type: "Palm Tree", soil: "Coarse sandy soil", region: "Coastal Myanmar", edible: "Edible", funfact: "Every part of coconut is useful.", img: "plants2/coconut.png", weather: "Hot", lat: 16.778, lng: 96.141 },
+            { id: 8, name: "Guava", type: "Fruit Tree", soil: "Loamy soil", region: "Yangon Region", edible: "Edible", funfact: "High vitamin C content.", img: "plants2/guava.png", weather: "Hot", lat: 16.812, lng: 96.141 },
+            { id: 9, name: "Pineapple", type: "Tropical Fruit", soil: "Well-drained sandy loam", region: "Lower Myanmar", edible: "Edible", funfact: "Pineapple is a bromeliad.", img: "plants2/pineapple.png", weather: "Hot", lat: 16.879, lng: 96.182 },
+            { id: 10, name: "Jackfruit", type: "Large Fruit Tree", soil: "Loamy to alluvial soil", region: "Ayeyarwady, Bago", edible: "Edible", funfact: "A single jackfruit can weigh very heavy.", img: "plants2/jackfruit.png", weather: "Hot", lat: 17.003, lng: 96.106 },
+            { id: 11, name: "Dragon Fruit", type: "Cactus Fruit", soil: "Sandy, rock-draining soil", region: "Mandalay", edible: "Edible", funfact: "Is actually a night-blooming cactus.", img: "plants2/dragonfruit.png", weather: "Hot", lat: 21.985, lng: 96.120 },
+            { id: 12, name: "Chili Pepper", type: "Vegetable", soil: "Loamy soil", region: "Mandalay", edible: "Edible", funfact: "Chillies prefer hot sunny weather.", img: "plants2/chili.png", weather: "Hot", lat: 21.980, lng: 96.100 },
+            { id: 13, name: "Okra", type: "Vegetable", soil: "Loamy soil", region: "Central Myanmar", edible: "Edible", funfact: "Okra contains mucilage used in soups.", img: "plants2/okra.png", weather: "Hot", lat: 21.900, lng: 96.040 },
+            { id: 14, name: "Eggplant", type: "Vegetable", soil: "Fertile loam", region: "Yangon Region", edible: "Edible", funfact: "One of the oldest cultivated vegetables.", img: "plants2/eggplant.png", weather: "Hot", lat: 16.800, lng: 96.160 },
+            { id: 15, name: "Roselle", type: "Leaf/Flower", soil: "Sandy loam", region: "Magway", edible: "Edible", funfact: "Used for deep-red roselle tea.", img: "plants2/roselle.png", weather: "Hot", lat: 20.150, lng: 95.380 },
+            { id: 16, name: "Sesame", type: "Oil Crop", soil: "Dry sandy soil", region: "Magway, Mandalay", edible: "Edible", funfact: "Ancient oil crop used widely.", img: "plants2/sesame.png", weather: "Hot", lat: 20.020, lng: 95.580 },
+            { id: 17, name: "Peanut", type: "Legume", soil: "Light loamy soil", region: "Sagaing, Mandalay", edible: "Edible", funfact: "Fixes nitrogen into soil.", img: "plants2/peanut.png", weather: "Hot", lat: 21.900, lng: 95.990 },
+            { id: 18, name: "Sweet Potato", type: "Root Crop", soil: "Well-drained loam", region: "Lower Myanmar", edible: "Edible", funfact: "Nutrient-dense and resilient.", img: "plants2/sweetpotato.png", weather: "Hot", lat: 16.900, lng: 96.000 },
+            { id: 19, name: "Jasmine", type: "Flowering Shrub", soil: "Moderately fertile loam", region: "Yangon, Delta", edible: "Non-edible", funfact: "Beloved for fragrance & offerings.", img: "plants2/jasmine.png", weather: "Hot", lat: 16.840, lng: 96.160 },
+            { id: 20, name: "Neem", type: "Medicinal Tree", soil: "Poor to sandy soils", region: "Central Dry Zone", edible: "Non-edible", funfact: "Famous medicinal properties.", img: "plants2/neem.png", weather: "Hot", lat: 20.050, lng: 95.600 },
+
+            /* 20 Mid */
+            { id: 21, name: "Rice", type: "Cereal", soil: "Flooded alluvial soil", region: "Delta & Lowlands", edible: "Edible", funfact: "Staple crop in Myanmar.", img: "plants2/rice.png", weather: "Mid", lat: 17.300, lng: 95.230 },
+            { id: 22, name: "Corn", type: "Cereal", soil: "Loamy soil", region: "Bago, Ayeyarwady", edible: "Edible", funfact: "Every kernel is a seed.", img: "plants2/corn.png", weather: "Mid", lat: 17.200, lng: 96.560 },
+            { id: 23, name: "Tomato", type: "Vegetable", soil: "Loamy soil", region: "Nay Pyi Taw", edible: "Edible", funfact: "Originally from South America.", img: "plants2/tomato.png", weather: "Mid", lat: 19.750, lng: 96.129 },
+            { id: 24, name: "Carrot", type: "Root", soil: "Loose, sandy loam", region: "Shan State", edible: "Edible", funfact: "Carrots were purple historically.", img: "plants2/carrot.png", weather: "Mid", lat: 22.000, lng: 96.500 },
+            { id: 25, name: "Onion", type: "Bulb", soil: "Sandy loam", region: "Myittha", edible: "Edible", funfact: "Onions store sulfur and nearby crops can absorb it.", img: "plants2/onion.png", weather: "Mid", lat: 21.800, lng: 95.500 },
+            { id: 26, name: "Garlic", type: "Bulb", soil: "Loamy soil", region: "Shan State", edible: "Edible", funfact: "Used for health benefits.", img: "plants2/garlic.png", weather: "Mid", lat: 22.100, lng: 96.400 },
+            { id: 27, name: "Pumpkin", type: "Vine", soil: "Rich soil", region: "Delta Region", edible: "Edible", funfact: "Excellent storage and versatile food.", img: "plants2/pumpkin.png", weather: "Mid", lat: 16.900, lng: 95.870 },
+            { id: 28, name: "Cabbage", type: "Leafy Vegetable", soil: "Moist loam", region: "Pyin Oo Lwin", edible: "Edible", funfact: "Prefers cool nights for firmness.", img: "plants2/cabbage.png", weather: "Mid", lat: 22.025, lng: 96.462 },
+            { id: 29, name: "Cucumber", type: "Vine", soil: "Sandy loam", region: "Central Myanmar", edible: "Edible", funfact: "High water content and cooling.", img: "plants2/cucumber.png", weather: "Mid", lat: 21.900, lng: 96.055 },
+            { id: 30, name: "Ginger", type: "Rhizome", soil: "Well-drained loam", region: "Shan & Kachin foothills", edible: "Edible", funfact: "Ancient spice & medicine.", img: "plants2/ginger.png", weather: "Mid", lat: 22.000, lng: 96.750 },
+            { id: 31, name: "Turmeric", type: "Rhizome", soil: "Loamy soil", region: "Lower Myanmar", edible: "Edible", funfact: "Used for colour and traditional medicine.", img: "plants2/turmeric.png", weather: "Mid", lat: 16.850, lng: 96.160 },
+            { id: 32, name: "Green Bean", type: "Legume", soil: "Loamy soil", region: "Central Plains", edible: "Edible", funfact: "Fixes nitrogen into the soil.", img: "plants2/greenbean.png", weather: "Mid", lat: 21.980, lng: 96.040 },
+            { id: 33, name: "Soybean", type: "Legume", soil: "Loamy soil", region: "Shan State", edible: "Edible", funfact: "Good protein source.", img: "plants2/soybean.png", weather: "Mid", lat: 22.120, lng: 96.380 },
+            { id: 34, name: "Sunflower", type: "Oil Crop", soil: "Dry loam", region: "Dry Zones", edible: "Edible", funfact: "Seeds are nutritious and oily.", img: "plants2/sunflower.png", weather: "Mid", lat: 20.200, lng: 96.500 },
+            { id: 35, name: "Papaya Leaf Plant", type: "Foliage/Medicinal", soil: "Loamy soil", region: "Mixed Regions", edible: "Non-edible", funfact: "Leaves used traditionally for remedies.", img: "plants2/papayaleafplant.png", weather: "Mid", lat: 17.800, lng: 96.400 },
+            { id: 36, name: "Betel Leaf", type: "Climbing Leaf", soil: "Loamy rich soil", region: "Delta & Lower", edible: "Edible", funfact: "Socially important in Myanmar culture.", img: "plants/betelleaf.png", weather: "Mid", lat: 16.780, lng: 96.150 },
+            { id: 37, name: "Sugarcane", type: "Grass Crop", soil: "Deep loamy soil", region: "Delta & Lowlands", edible: "Edible", funfact: "Major sugar source.", img: "plants/sugarcane.png", weather: "Mid", lat: 17.010, lng: 95.920 },
+            { id: 38, name: "Banana Flower Plant", type: "Edible Flower", soil: "Rich loamy", region: "Lower Myanmar", edible: "Edible", funfact: "Used in many salads and curries.", img: "plants/bananaflowerplant.png", weather: "Mid", lat: 16.900, lng: 96.000 },
+            { id: 39, name: "Tea Leaf (Lowland)", type: "Tea", soil: "Slightly acidic well-drained", region: "Lowland tea areas", edible: "Non-edible (processed leaves)", funfact: "Lowland tea has its own flavor profile.", img: "plants/tealeaflowland.png", weather: "Mid", lat: 18.350, lng: 96.650 },
+            { id: 40, name: "Thanaka", type: "Cosmetic Tree", soil: "Sandy loam", region: "Dry Zone & Central", edible: "Non-edible", funfact: "Thanaka is used as skin paste in Myanmar.", img: "plants/thanaka.png", weather: "Mid", lat: 20.980, lng: 95.980 },
+
+            /* 20 Cold */
+            { id: 41, name: "Strawberry", type: "Berry", soil: "Sandy loam, well-drained", region: "Pyin Oo Lwin, Shan Highlands", edible: "Edible", funfact: "Cold helps sweetness.", img: "plants/strawberry.png", weather: "Cold", lat: 22.035, lng: 96.463 },
+            { id: 42, name: "Tea Leaf (Highland)", type: "Tea", soil: "Acidic, well-drained", region: "Highland tea areas", edible: "Non-edible (processed leaves)", funfact: "High altitude improves aroma.", img: "plants/tealeafhighland.png", weather: "Cold", lat: 20.880, lng: 97.030 },
+            { id: 43, name: "Coffee", type: "Shrub", soil: "Rich volcanic/loamy", region: "Highlands", edible: "Edible (bean)", funfact: "Coffee prefers cool highlands.", img: "plants/coffee.png", weather: "Cold", lat: 21.200, lng: 96.410 },
+            { id: 44, name: "Apple", type: "Fruit Tree", soil: "Loamy, well-drained", region: "Shan Highlands", edible: "Edible", funfact: "Requires chill hours to fruit well.", img: "plants/apple.png", weather: "Cold", lat: 22.000, lng: 96.500 },
+            { id: 45, name: "Avocado", type: "Fruit Tree", soil: "Rich loamy soil", region: "Highlands", edible: "Edible", funfact: "Rich in healthy fats.", img: "plants/avocado.png", weather: "Cold", lat: 21.850, lng: 96.620 },
+            { id: 46, name: "Plum", type: "Fruit Tree", soil: "Deep loam", region: "Highlands", edible: "Edible", funfact: "Stone fruit family.", img: "plants/plum.png", weather: "Cold", lat: 22.010, lng: 96.420 },
+            { id: 47, name: "Peach", type: "Fruit Tree", soil: "Well-drained loam", region: "Highlands", edible: "Edible", funfact: "Sweet stone fruit.", img: "plants/peach.png", weather: "Cold", lat: 22.015, lng: 96.440 },
+            { id: 48, name: "Broccoli", type: "Brassica", soil: "Fertile loam", region: "Pyin Oo Lwin", edible: "Edible", funfact: "Rich in vitamins.", img: "plants/broccoli.png", weather: "Cold", lat: 22.034, lng: 96.470 },
+            { id: 49, name: "Cauliflower", type: "Brassica", soil: "Moist loam", region: "Pyin Oo Lwin", edible: "Edible", funfact: "Close relative to broccoli.", img: "plants/cauliflower.png", weather: "Cold", lat: 22.038, lng: 96.468 },
+            { id: 50, name: "Spinach", type: "Leafy Vegetable", soil: "Moist fertile soil", region: "Highland farms", edible: "Edible", funfact: "Fast-growing leafy green.", img: "plants/spinach.png", weather: "Cold", lat: 22.036, lng: 96.466 },
+            { id: 51, name: "Lettuce", type: "Leafy Vegetable", soil: "Loose fertile loam", region: "Highlands", edible: "Edible", funfact: "Several varieties for salads.", img: "plants/lettuce.png", weather: "Cold", lat: 22.030, lng: 96.460 },
+            { id: 52, name: "Beetroot", type: "Root", soil: "Loamy soil", region: "Highland terraces", edible: "Edible", funfact: "Used as natural dye and food.", img: "plants/beetroot.png", weather: "Cold", lat: 22.032, lng: 96.469 },
+            { id: 53, name: "Mustard Leaf", type: "Leafy", soil: "Loam", region: "Highland farms", edible: "Edible", funfact: "Popular as a vegetable leaf.", img: "plants/mustardleaf.png", weather: "Cold", lat: 22.031, lng: 96.465 },
+            { id: 54, name: "Celery", type: "Leafy Stalk", soil: "Moist loam", region: "Cool farms", edible: "Edible", funfact: "Requires consistent water.", img: "plants/celery.png", weather: "Cold", lat: 22.029, lng: 96.467 },
+            { id: 55, name: "Parsley", type: "Herb", soil: "Well-drained loam", region: "Garden plots", edible: "Edible", funfact: "Used fresh or dried.", img: "plants/parsley.png", weather: "Cold", lat: 22.033, lng: 96.464 },
+            { id: 56, name: "Mint", type: "Herb", soil: "Moist loam", region: "Cool shaded areas", edible: "Edible", funfact: "Easy to grow and spreads quickly.", img: "plants/mint.png", weather: "Cold", lat: 22.034, lng: 96.462 },
+            { id: 57, name: "Lavender", type: "Flowering Herb", soil: "Well-drained soil", region: "Highland gardens", edible: "Non-edible", funfact: "Loved for scent and bees.", img: "plants/lavender.png", weather: "Cold", lat: 22.040, lng: 96.455 },
+            { id: 58, name: "Rosemary", type: "Herb", soil: "Sandy loam", region: "Highlands", edible: "Non-edible", funfact: "Aromatic culinary herb.", img: "plants/rosemary.png", weather: "Cold", lat: 22.045, lng: 96.452 },
+            { id: 59, name: "Pine Tree", type: "Conifer", soil: "Acidic forest soil", region: "Highlands", edible: "Non-edible", funfact: "Important timber species.", img: "plants/pinetree.png", weather: "Cold", lat: 22.100, lng: 96.300 },
+            { id: 60, name: "Winter Melon", type: "Gourd", soil: "Loamy soil", region: "Cool valleys", edible: "Edible", funfact: "Large fruit used in soups and sweets.", img: "plants/wintermelon.png", weather: "Cold", lat: 22.020, lng: 96.470 },
+
+            /* 10 Rare */
+            { id: 61, name: "Pauk Paw (endemic)", type: "Endemic Tree", soil: "Forest loam", region: "Northern ranges", edible: "Non-edible", funfact: "Endemic local species.", img: "img/no_image.png", weather: "Rare", lat: 23.200, lng: 96.500 },
+            { id: 62, name: "Hinn Thar (wild orchid)", type: "Orchid", soil: "Humus-rich forest soil", region: "Several forest pockets", edible: "Non-edible", funfact: "Orchids often have specific pollinators.", img: "plants/hinnthar.png", weather: "Rare", lat: 23.150, lng: 96.420 },
+            { id: 63, name: "Thitkado (Ironwood)", type: "Hardwood Tree", soil: "Deep forest soil", region: "Kachin & Chin Hills", edible: "Non-edible", funfact: "Valued timber; very dense wood.", img: "plants/thikatoh.png", weather: "Rare", lat: 23.300, lng: 96.360 },
+            { id: 64, name: "Padauk", type: "Deciduous Tree", soil: "Well-drained loam", region: "Lowland forests", edible: "Non-edible", funfact: "National flower of Myanmar.", img: "plants/padauk.png", weather: "Rare", lat: 18.800, lng: 96.150 },
+            { id: 65, name: "Pyinkado", type: "Hardwood Tree", soil: "Forest soil", region: "Lowland & upland forests", edible: "Non-edible", funfact: "Used in traditional carpentry.", img: "plants/pyinkado.png", weather: "Rare", lat: 19.200, lng: 95.900 },
+            { id: 66, name: "Star Tortoise Fruit Plant", type: "Wild Fruit", soil: "Forest loam", region: "Isolated pockets", edible: "Edible", funfact: "Local common name originates from fruit shape.", img: "img/no_image.png", weather: "Rare", lat: 19.500, lng: 95.700 },
+            { id: 67, name: "Wild Mangosteen", type: "Wild Fruit Tree", soil: "Humus-rich soil", region: "Southern forests", edible: "Edible", funfact: "Smaller than cultivated mangosteen.", img: "plants/wildmangosteen.png", weather: "Rare", lat: 15.000, lng: 98.000 },
+            { id: 68, name: "Maha Thingyan Flower", type: "Ceremonial Flower", soil: "Sandy loam", region: "Cultural regions", edible: "Non-edible", funfact: "Associated with local festivals.", img: "img/no_image.png", weather: "Rare", lat: 16.800, lng: 96.150 },
+            { id: 69, name: "Kanyin (Dipterocarpus)", type: "Rainforest Tree", soil: "Deep rainforest soil", region: "Lowland forests", edible: "Non-edible", funfact: "Important for forest ecology.", img: "plants/kanyin.png", weather: "Rare", lat: 17.000, lng: 95.900 },
+            { id: 70, name: "Kanazo (Medicinal)", type: "Medicinal Tree", soil: "Riverine loam", region: "River valleys", edible: "Non-edible", funfact: "Used in traditional medicine.", img: "plants/kanazo.png", weather: "Rare", lat: 19.000, lng: 95.800 }
+        ];
+
+        const map = L.map('pg-map', { zoomControl: true }).setView([21.5, 96.0], 6);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        const PG_MARKERS = new Map();
+
+        function pgCreateIcon(weather) {
+            let bg = '#7dd37d'; // default green
+            if (weather === 'Hot') bg = '#ffb86b';
+            if (weather === 'Mid') bg = '#6aa6ff';
+            if (weather === 'Cold') bg = '#72d6a3';
+            if (weather === 'Rare') bg = '#cfa6ff';
+            const html = `<div style="
+      width:22px;height:22px;border-radius:50%;
+      background:${bg};border:3px solid rgba(255,255,255,0.85);
+      box-shadow:0 6px 12px rgba(0,0,0,0.18)"></div>`;
+            return L.divIcon({ html, className: 'pg-divicon', iconSize: [28, 28], iconAnchor: [14, 14] });
+        }
+
+        PG_PLANTS.forEach(p => {
+            const m = L.marker([p.lat, p.lng], { icon: pgCreateIcon(p.weather) }).addTo(map);
+            m.bindPopup(`<strong>${p.name}</strong><br>${p.region}<br>${p.soil}`);
+            PG_MARKERS.set(p.id, m);
+
+            m.on('click', () => {
+                const el = document.getElementById('pg-card-' + p.id);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    pgHighlightCard(p.id);
+                    document.getElementById('pg-selected').textContent = p.name;
+                }
+            });
+        });
+
+        try {
+            const group = L.featureGroup(Array.from(PG_MARKERS.values()));
+            map.fitBounds(group.getBounds().pad(0.2));
+        } catch (e) {
+            console.warn('fitBounds failed', e);
+        }
+
+        const pgCardScroll = document.getElementById('pg-card-scroll');
+        const pgTotalEl = document.getElementById('pg-total');
+        const pgVisibleEl = document.getElementById('pg-visible');
+
+        function pgRenderCards(list) {
+            pgCardScroll.innerHTML = '';
+            list.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'pg-card';
+                card.id = 'pg-card-' + p.id;
+                card.tabIndex = 0;
+                card.innerHTML = `
+      <img class="pg-card-img" src="${p.img}" alt="${p.name}">
+      <div class="pg-card-body">
+        <div class="pg-card-title">${p.name}</div>
+        <div class="pg-card-meta">
+          <div><strong>Type:</strong> ${p.type}</div>
+          <div><strong>Soil:</strong> ${p.soil}</div>
+          <div><strong>Region:</strong> ${p.region}</div>
+          <div><strong>Edible:</strong> ${p.edible}</div>
+          <div><strong>Fun fact:</strong> ${p.funfact}</div>
+        </div>
+      </div>
+    `;
+                card.addEventListener('click', () => {
+                    const marker = PG_MARKERS.get(p.id);
+                    if (marker) {
+                        map.setView(marker.getLatLng(), Math.max(map.getZoom(), 11), { animate: true });
+                        marker.openPopup();
+                        pgBounceMarker(marker);
+                        pgHighlightCard(p.id);
+                        document.getElementById('pg-selected').textContent = p.name;
+                    }
+                });
+                pgCardScroll.appendChild(card);
+            });
+
+            pgVisibleEl.textContent = list.length;
+        }
+
+        pgRenderCards(PG_PLANTS);
+        pgTotalEl.textContent = PG_PLANTS.length;
+
+        let pgCurrentHighlight = null;
+        function pgHighlightCard(id) {
+            if (pgCurrentHighlight) {
+                const prev = document.getElementById('pg-card-' + pgCurrentHighlight);
+                if (prev) prev.classList.remove('pg-card-highlight');
+            }
+            const el = document.getElementById('pg-card-' + id);
+            if (el) {
+                el.classList.add('pg-card-highlight');
+                pgCurrentHighlight = id;
+                setTimeout(() => {
+                    const cur = document.getElementById('pg-card-' + id);
+                    if (cur) cur.classList.remove('pg-card-highlight');
+                }, 3500);
+            }
+        }
+
+        function pgBounceMarker(marker) {
+            const latlng = marker.getLatLng();
+            let i = 0;
+            const intId = setInterval(() => {
+                const offset = (i % 2 === 0) ? 0.0006 : -0.00035;
+                marker.setLatLng([latlng.lat + offset, latlng.lng]);
+                i++;
+                if (i > 6) {
+                    clearInterval(intId);
+                    marker.setLatLng(latlng);
+                }
+            }, 75);
+        }
+
+        const pgSearch = document.getElementById('pg-search');
+        const pgPills = document.querySelectorAll('.pg-pill');
+        const pgReset = document.getElementById('pg-reset');
+
+        let pgCurrentFilter = 'All';
+
+        function pgApplyFilters() {
+            const q = pgSearch.value.trim().toLowerCase();
+            const filter = pgCurrentFilter;
+
+            const filtered = PG_PLANTS.filter(p => {
+                const matchesSearch =
+                    q === '' ||
+                    p.name.toLowerCase().includes(q) ||
+                    p.soil.toLowerCase().includes(q) ||
+                    p.region.toLowerCase().includes(q) ||
+                    p.type.toLowerCase().includes(q);
+                const matchesFilter =
+                    filter === 'All' ||
+                    (filter === 'Hot' && p.weather === 'Hot') ||
+                    (filter === 'Mid' && p.weather === 'Mid') ||
+                    (filter === 'Cold' && p.weather === 'Cold') ||
+                    (filter === 'Rare' && p.weather === 'Rare');
+                return matchesSearch && matchesFilter;
+            });
+
+            const visibleIds = new Set(filtered.map(p => p.id));
+            PG_PLANTS.forEach(p => {
+                const m = PG_MARKERS.get(p.id);
+                if (m) {
+                    if (visibleIds.has(p.id)) {
+                        if (!map.hasLayer(m)) m.addTo(map);
+                    } else {
+                        if (map.hasLayer(m)) map.removeLayer(m);
+                    }
+                }
+            });
+
+            pgRenderCards(filtered);
+        }
+
+        pgPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                pgPills.forEach(x => x.classList.remove('pg-pill-active'));
+                pill.classList.add('pg-pill-active');
+                pgCurrentFilter = pill.dataset.filter || 'All';
+                pgApplyFilters();
+            });
+        });
+
+        let pgSearchTimer = null;
+        pgSearch.addEventListener('input', () => {
+            clearTimeout(pgSearchTimer);
+            pgSearchTimer = setTimeout(() => pgApplyFilters(), 180);
+        });
+
+        pgReset.addEventListener('click', () => {
+            pgSearch.value = '';
+            pgCurrentFilter = 'All';
+            pgPills.forEach(x => x.classList.remove('pg-pill-active'));
+            document.querySelector('.pg-pill[data-filter="All"]').classList.add('pg-pill-active');
+            PG_PLANTS.forEach(p => {
+                const m = PG_MARKERS.get(p.id);
+                if (m && !map.hasLayer(m)) m.addTo(map);
+            });
+            pgRenderCards(PG_PLANTS);
+        });
+
+        document.querySelector('.pg-pill[data-filter="All"]').classList.add('pg-pill-active');
+        map.on('moveend zoomend', () => {
+            const visibleCount = PG_PLANTS.reduce((acc, p) => acc + (map.getBounds().contains([p.lat, p.lng]) ? 1 : 0), 0);
+            const cardCount = document.querySelectorAll('.pg-card').length;
+            pgVisibleEl.textContent = Math.min(visibleCount, cardCount);
+        });
+
+        document.querySelectorAll('.info-tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.info-tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.info-tab-panel').forEach(p => p.classList.remove('active'));
+
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

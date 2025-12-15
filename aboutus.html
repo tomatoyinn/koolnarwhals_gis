@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us || Kool Narwhals</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Javascript -->
+    <script src="jiva.js" defer></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap (for layout only) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="fevicon.jpg" type="image/jpeg">
+</head>
+
+<body class="home-root">
+    <!-- Navbar start -->
+    <nav class="glass-nav">
+        <div class="nav-item">
+            <a href="index.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-house-door"></i>
+                <span class="nav-text">Home</span>
+            </a>
+        </div>
+        <div class="nav-item dropdown-parent">
+            <a href="plant_page1.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-file-earmark-text"></i>
+                <span class="nav-text">Content</span>
+            </a>
+            <div class="dropdown">
+                <ul class="dropdown-list">
+                    <li><a href="plant_page1.html">Plants</a></li>
+                    <li><a href="environmental2.html">Environmental Layers</a></li>
+                    <li><a href="GIS.html">What is GIS?</a></li>
+                    <li><a href="GIS_plant.html">GIS Map</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="aboutus.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-info-circle"></i>
+                <span class="nav-text">About Us</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="aboutus.html#contact-us"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-envelope"></i>
+                <span class="nav-text">Contact</span>
+            </a>
+        </div>
+        <div class="nav-auth">
+            <a href="signin.html" class="auth-btn sign-button">Sign Up</a>
+            <a href="login.html" class="auth-btn login-btn">Log In</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <!-- Navbar end -->
+
+    <section class="about-hero">
+        <div class="about-content container">
+            <h2 class="about-subtitle">WELCOME TO</h2>
+            <h1 class="about-title">ABOUT US SECTION!</h1>
+            <p class="about-description">
+                Meet our team as we bring together science, design, and community care with GIS to make local parks
+                greener and healthier!
+            </p>
+            <div class="about-buttons">
+                <a href="#aim" class="btn btn-filled">Get Started</a>
+                <a href="#FAQs" class="btn btn-outline">I have a question!</a>
+            </div>
+        </div>
+        <div class="about-image">
+            <img src="img/about_gif.gif" alt="A gif of a park" />
+        </div>
+    </section>
+
+    <!-- Aim section start -->
+    <section class="about-aim container" id="aim">
+        <div class="aim-text">
+            <h1 style="color: #4a4040;">OUR AIMS</h1>
+        </div>
+
+        <div class="aim-paragraph">
+            <p>
+                We are a group of students passionate about revitalizing local parks using smart technology and
+                sustainable solutions. Our goal is to make green spaces more engaging, healthier, and more enjoyable for
+                everyone in the community.
+            </p>
+        </div>
+    </section>
+
+    <section class="about-aim2 container">
+        <div class="aim-cards">
+            <div class="aim-card">
+                <i class="fa-solid fa-brain icon-circle"></i>
+                <div class="aim-content">
+                    <h5 class="aim-title"><b>Smart Planting</b></h5>
+                    <p>Revitalize local parks using technology and GIS systems to guide planting.</p>
+                </div>
+            </div>
+            <div class="aim-card">
+                <i class="fa-solid fa-people-arrows-left-right icon-circle"></i>
+                <div class="aim-content">
+                    <h5 class="aim-title"><b>Community & Environment</b></h5>
+                    <p>Protect the environment and encourage community involvement.</p>
+                </div>
+            </div>
+            <div class="aim-card">
+                <i class="fa-solid fa-book icon-circle"></i>
+                <div class="aim-content">
+                    <h5 class="aim-title"><b>Education & Engagement</b></h5>
+                    <p>Help visitors and garden enthusiasts learn how to make parks greener and healthier.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Aim section end -->
+
+    <!-- TEAM MEMBERS -->
+    <h1 class="text-center mem-h1 mb-5">Our Team</h1>
+    <div class="team-container card-grid container">
+        <div class="card">
+            <div class="card__background"></div>
+            <div>
+                <div class="img"><img src="img1/Soe_Htike_Oo2.png" alt="Soe Htike Oo"></div>
+                <div class="name">Soe Htike Oo</div>
+                <div class="job">Main-researcher and Co-coder</div>
+            </div>
+            <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__background"></div>
+            <div>
+                <div class="img"><img src="img2/Than_Sin_Ko.png" alt="Than Sin Ko"></div>
+                <div class="name">Than Sin Ko</div>
+                <div class="job">Main-coder and Main-researcher</div>
+            </div>
+            <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__background"></div>
+            <div>
+                <div class="img"><img src="img2/Thuta_Nyan.jpg" alt="Thuta Nyan"></div>
+                <div class="name">Thuta Nyan</div>
+                <div class="job">Main-researcher and Co-coder</div>
+            </div>
+            <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__background"></div>
+            <div>
+                <div class="img"><img src="img2/Yinn.jpg" alt="Yin Myo Myat"></div>
+                <div class="name">Yin Myo Myat</div>
+                <div class="job">Main-coder and Main-researcher</div>
+            </div>
+            <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQs section start -->
+    <section class="py-5" id="FAQs">
+        <div class="container bg-white rounded-4 p-4 p-lg-5">
+            <div class="row g-5 align-items-start">
+
+                <div class="col-lg-6">
+                    <span class="fw-semibold small faq-small">
+                        Kool Narwhals answers to
+                    </span>
+
+                    <h2 class="fw-bold mt-2 mb-4 faq-med">
+                        Frequently asked questions
+                    </h2>
+
+                    <div class="p-4 rounded-4 faq-container" style="margin-top: 100px;">
+                        <div class="faq-content">
+                            <h5 class="fw-semibold faq-big mt-3">Still have questions?</h5>
+                            <p class="text-muted mb-3 mt-4">
+                                Can't find the answer to your question? Send us an email and we'll get back to you as
+                                soon
+                                as possible!
+                            </p>
+
+                            <button type="button" class="faq-button mt-4">
+                                <a href="#contact-us">Send email</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 mb-3 rounded-4 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1"
+                                    style="background: linear-gradient(135deg, #4a4040 0%, #1a1a1a 100%); color:white;">
+                                    Reason behind building this website
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted"
+                                    style="background: linear-gradient(135deg, #f3fdf1, #d0f1cd); font-size: 14px;">
+                                    Many visitors and local residents are unaware of how plants grow in different zones
+                                    of a park, which areas
+                                    need more care, and how to protect the environment responsibly.
+                                    By creating this website, we want to simplify the process of learning about plants,
+                                    promote eco-friendly
+                                    actions, and support the gardeners who maintain these green spaces
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3 rounded-4 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2"
+                                    style="background: linear-gradient(135deg, #4a4040 0%, #1a1a1a 100%); color:white;">
+                                    Goals of our website
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted"
+                                    style="background: linear-gradient(135deg, #f3fdf1, #d0f1cd); font-size: 14px;">
+                                    <ul>
+                                        <li> Help visitors learn more about plants</li>
+                                        <li class="mt-3"> Encourage sustainable habits</li>
+                                        <li class="mt-3"> Support park gardeners</li>
+                                        <li class="mt-3"> Involve the community</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 mb-3 rounded-4 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3"
+                                    style="background: linear-gradient(135deg, #4a4040 0%, #1a1a1a 100%); color:white;">
+                                    What are our future plans?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted"
+                                    style="background: linear-gradient(135deg, #f3fdf1, #d0f1cd); font-size: 14px;">
+                                    <ul>
+                                        <li>Add more plants and environmental data to the website</li>
+                                        <li class="mt-3">Update the interactive park map with new features</li>
+                                        <li class="mt-3">Include interviews with gardeners for authentic insights</li>
+                                        <li class="mt-3">Improve website interactivity, including interactive maps,
+                                            plant info, and
+                                            visual guides</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border-0 rounded-4 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq4"
+                                    style="background: linear-gradient(135deg, #4a4040 0%, #1a1a1a 100%); color:white;">
+                                    History of our website
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted"
+                                    style="background: linear-gradient(135deg, #f3fdf1, #d0f1cd); font-size: 14px;">
+                                    <ul>
+                                        <li>Our website was created in 2025 by Year 9 Sangria, Group 3, to help improve
+                                            local parks using GIS technology. We wanted to show how mapping
+                                            environmental data can guide planting and promote sustainable habits.</li>
+
+                                        <li class="mt-3">Through park visits, gardener interviews, and research, we
+                                            developed this
+                                            interactive platform to educate visitors, share plant information, and
+                                            encourage the community to help make parks greener and healthier.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQs section end -->
+
+    <!-- Contact us section -->
+    <section id="contact-us" class="container">
+        <div class="row container">
+            <div class="col-md-7">
+                <div class="contact-contain">
+                    <h3><b>Send us a message</b></h3>
+                    <p>Feel free to contact us if you have any question, suggestion, complaints, or if you are in need
+                        of
+                        help with
+                        using the website/planting!.</p>
+
+                    <form class="contact">
+                        <div class="contact-row">
+                            <div class="contact-group">
+                                <label for="first-name"><b>First Name</b></label>
+                                <input type="text" placeholder="Enter your first name" id="input_fname" required>
+                            </div>
+
+                            <div class="contact-group">
+                                <label for="last-name"><b>Last Name</b></label>
+                                <input type="text" placeholder="Enter your last name" id="input_lusername" required>
+                            </div>
+                        </div>
+
+                        <div class="contact-row">
+                            <div class="contact-group">
+                                <label for="email"><b>Email</b></label>
+                                <input type="text" placeholder="Enter your email" id="input_email" required>
+                            </div>
+
+                            <div class="contact-group">
+                                <label for="last-name"><b>Phone Number</b></label>
+                                <input type="text" placeholder="Enter your phone number" id="input_phone" required>
+                            </div>
+                        </div>
+
+                        <div class="contact-group">
+                            <label for="message"><b>Message</b></label>
+                            <textarea id="message" placeholder="Type your message here..." required></textarea>
+                        </div>
+
+                        <div class="contact-group button-left">
+                            <button type="submit mb-5">Send a message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-1">
+
+            </div>
+
+            <div class="col-md-4 contact-info2 mt-5">
+                <div class="contact-content">
+                    <h4>Contact us from:</h4>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <div>Hotline</div>
+                            <span>+95 860208511</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <div>SMS / WhatsApp</div>
+                            <span>+95 807026767</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <div>Email</div>
+                            <span>koolnarwhals.edu@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="connect-title">Connect with us through</div>
+                    <div class="connect-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+
+    <div id="menuToggle">
+        <i class="fas fa-share-alt" style="color: #c5e8be; font-size:24px;"></i>
+
+        <div class="circleItem">
+            <a href="https://www.tiktok.com/@kool.narwhals.knw?_r=1&_t=ZS-91lf4cNcAzY" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+        <div class="circleItem">
+            <a href="https://www.facebook.com/share/1BbB4ppVGL/?mibextid=wwXIfr" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer class="footer-custom mt-5 pt-5 pb-3"
+            style="border-top-left-radius: 30px; border-top-right-radius: 30px;">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-3">
+                        <h5 class="fw-bold footer-headings">Explore & Learn</h5>
+                        <ul class="list-unstyled footer-list">
+                            <li><a href="index.html" class="text-decoration-none">Home</a></li>
+                            <li><a href="aboutus.HTML" target="_blank" class="text-decoration-none">About Us</a></li>
+                            <li><a href="#" class="text-decoration-none">GIS System</a></li>
+                            <li><a href="environmental2.html" class="text-decoration-none">Environmental layers</a></li>
+                            <li><a href="environmental2.html#plants-filter-section" class="text-decoration-none">Plants
+                                    details</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5 class="fw-bold footer-headings">Plant Categories</h5>
+                        <ul class="list-unstyled footer-list">
+                            <li><a href="plant_page4.html" class="text-decoration-none">Shaded</a></li>
+                            <li><a href="plant_page5.html" class="text-decoration-none">Surface Water</a></li>
+                            <li><a href="review.html" class="text-decoration-none">Reviews</a></li>
+                            <li><a href="aboutus.html#FAQs" class="text-decoration-none">FAQ</a></li>
+                            <li><a href="reference.html" class="text-decoration-none">References</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="signtext mb-1">Sign up to news & updates</p>
+
+                        <form action="">
+                            <input type="text" id="fullName" name="fullName" placeholder="Full Name"
+                                class="mt-2 name-input" style="color: white;">
+
+                            <div class="email-box mt-3">
+                                <input type="text" id="email" name="email" placeholder="Email address"
+                                    class="email-input">
+                                <button class="signup-btn">Sign up</button>
+                            </div>
+                        </form>
+
+                        <div class="social-media mt-4">
+                            <p class="signtext">Find us on social media</p>
+                            <div class="social-icons">
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-tiktok"></i>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                        </div>
+
+                        <div class="contact-info" style="margin-top: 30px;">
+                            <p class="signtext">Get in touch</p>
+                            <div class="phone-no" style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-regular fa-address-book" style="font-size: 18px;"></i>
+                                <span style="line-height: 1; font-size: 16px;">+95 909008120</span>
+                            </div>
+                            <div class="mail mt-2" style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-regular fa-envelope" style="font-size: 18px;"></i>
+                                <span style="line-height: 1; font-size: 16px;">koolnarwhals.edu@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="small-message-container mt-5">
+                    <span class="small-message">&copy; 2025 Kool Narwhals - Helping you explore, plant, and protect our green spaces.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function revealOnScroll() {
+            const els = document.querySelectorAll('.team-container .card, .info-card');
+            const trigger = window.innerHeight * 0.9;
+
+            els.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < trigger && rect.bottom > 0) {
+                    el.classList.add('in-view');
+                } else {
+                    el.classList.remove('in-view');
+                }
+            });
+        }
+
+        window.addEventListener('load', revealOnScroll);
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('resize', revealOnScroll);
+
+        const menuToggle = document.getElementById('menuToggle');
+        const circleItems = document.querySelectorAll('#menuToggle .circleItem');
+        let isOpen = false;
+
+        menuToggle.addEventListener('click', function () {
+            if (!isOpen) {
+                menuToggle.classList.add('active');
+                circleItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add('open');
+                    }, index * 100);
+                });
+                isOpen = true;
+            } else {
+                menuToggle.classList.remove('active');
+                circleItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.remove('open');
+                    }, (circleItems.length - 1 - index) * 100);
+                });
+                isOpen = false;
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const form = document.querySelector(".contact");
+
+            const firstNameInput = document.getElementById("input_fname");
+            const lastNameInput = document.getElementById("input_lusername");
+            const emailInput = document.getElementById("input_email");
+            const phoneInput = document.getElementById("input_phone");
+            const messageInput = document.getElementById("message");
+
+            function showError(input, message) {
+                let error = input.parentElement.querySelector(".error-msg");
+
+                if (!error) {
+                    error = document.createElement("div");
+                    error.classList.add("error-msg");
+                    error.style.color = "red";
+                    error.style.fontSize = "13px";
+                    error.style.marginTop = "4px";
+                    input.parentElement.appendChild(error);
+                }
+
+                error.innerHTML = message;
+            }
+
+            function showSuccess(input) {
+                const error = input.parentElement.querySelector(".error-msg");
+                if (error) error.innerHTML = "";
+            }
+
+            function validateFirstName() {
+                const value = firstNameInput.value.trim();
+                if (value === "") {
+                    showError(firstNameInput, "First name is required");
+                    return false;
+                }
+                showSuccess(firstNameInput);
+                return true;
+            }
+
+            function validateLastName() {
+                const value = lastNameInput.value.trim();
+                if (value === "") {
+                    showError(lastNameInput, "Last name is required");
+                    return false;
+                }
+                showSuccess(lastNameInput);
+                return true;
+            }
+
+            function validateEmail() {
+                const email = emailInput.value.trim();
+                const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!pattern.test(email)) {
+                    showError(emailInput, "Please enter a valid email address");
+                    return false;
+                }
+                showSuccess(emailInput);
+                return true;
+            }
+
+            function validatePhone() {
+                const phone = phoneInput.value.trim();
+                if (!/^[0-9]{9,11}$/.test(phone)) {
+                    showError(phoneInput, "Phone number must be 9–11 digits");
+                    return false;
+                }
+                showSuccess(phoneInput);
+                return true;
+            }
+
+            function validateMessage() {
+                const msg = messageInput.value.trim();
+                if (msg.length < 10) {
+                    showError(messageInput, "Message must be at least 10 characters");
+                    return false;
+                }
+                showSuccess(messageInput);
+                return true;
+            }
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const valid =
+                    validateFirstName() &&
+                    validateLastName() &&
+                    validateEmail() &&
+                    validatePhone() &&
+                    validateMessage();
+
+                if (!valid) return;
+
+                alert("Thank you! Your message has been sent.");
+
+                form.reset();
+            });
+
+        });
+    </script>
+</body>
+
+</html>

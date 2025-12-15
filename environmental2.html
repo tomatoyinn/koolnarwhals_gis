@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Layers and Details || Kool Narwhals</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward_ios" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript  -->
+    <script src="jiva.js" defer></script>
+    <!-- Google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..900;1,6..72,200..900&family=Pacifico&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap (for layout only) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="fevicon.jpg" type="image/jpeg">
+</head>
+
+<body class="home-root" style="overflow-x: hidden;">
+    <!-- Navbar start -->
+    <nav class="glass-nav">
+        <div class="nav-item">
+            <a href="index.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-house-door"></i>
+                <span class="nav-text">Home</span>
+            </a>
+        </div>
+        <div class="nav-item dropdown-parent">
+            <a href="plant_page1.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-file-earmark-text"></i>
+                <span class="nav-text">Content</span>
+            </a>
+            <div class="dropdown">
+                <ul class="dropdown-list">
+                    <li><a href="plant_page1.html">Plants</a></li>
+                    <li><a href="environmental2.html">Environmental Layers</a></li>
+                    <li><a href="GIS.html">What is GIS?</a></li>
+                    <li><a href="GIS_plant.html">GIS Map</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="aboutus.html"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-info-circle"></i>
+                <span class="nav-text">About Us</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="aboutus.html#contact-us"
+                style="display: flex; align-items: center; gap: 0.6rem; color: inherit; text-decoration: none;">
+                <i class="bi bi-envelope"></i>
+                <span class="nav-text">Contact</span>
+            </a>
+        </div>
+        <div class="nav-auth">
+            <a href="signin.html" class="auth-btn sign-button">Sign Up</a>
+            <a href="login.html" class="auth-btn login-btn">Log In</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <!-- Navbar end -->
+
+    <div class="carousel prev">
+        <div class="list">
+            <div class="item">
+                <img src="img/carousel.jpg" alt="Park-1">
+                <div class="content">
+                    <br>
+                    <br>
+                    <br>
+                    <div class="author">Kool Narwhals</div>
+                    <div class="title">Environmental Zones</div>
+                    <div class="topic"></div>
+                    <div class="description">
+                        This section maps the park’s environmental layers—sunlight, shade, soil type, moisture, water
+                        access, and visitor paths—and matches them with suitable plants. It explains each plant’s needs
+                        and why they are the best fit for each environmental zone to support healthy, sustainable
+                        growth.
+                    </div>
+                    <div class="buttons mb-5 caro-btn">
+                        <button><a href="#enviro" style="text-decoration: none; color: black;">See more</a></button>
+                        <button><a href="aboutus.HTML" style="text-decoration: none; color: white;">Who we
+                                are</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Enviro-info section end -->
+
+    <!-- Enviro-info section 2 start -->
+    <section class="container mt-5" id="enviro">
+        <div class="row">
+            <div class="col-md-5">
+                <span class="small-subtitle mt-5 section-tag">What is even GIS system?</span>
+                <h2 class="enviro-info2-h2 mt-3">Exploring the details about <span>Environmental Layers</span></h2>
+                <p class="mt-4 enviro-info2-para">In Geographic Information Systems (GIS), environmental layers
+                    represent spatial datasets that describe various factors influencing ecosystems, land use, and
+                    habitat conditions.</p>
+                <p class="mt-4 enviro-info2-para">For the factors you listed—sunlight, shade, soil type, moisture level,
+                    water
+                    access, and visitor footpaths—each can be conceptualized as a separate GIS layer. Below is a
+                    detailed breakdown.</p>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-5">
+                <img src="img/soil.jpg" alt="Different type of soil" class="rounded" style="width: 550px;">
+            </div>
+        </div>
+    </section>
+    <!-- Enviro-info section 2 end -->
+
+    <!-- Enviro-info section 3 start -->
+    <div class="container enviro3-contain">
+        <h2><span>☼</span>Different Types of Sunlight</h2>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="img-wrapper rounded-top-left">
+                    <img src="img/full-sun.jpg" alt="Full Sun" class="img-fluid">
+                    <div class="overlay-text-container">
+                        <div class="overlay-text">
+                            <h3>Full Sun</h3>
+                            <p>Gets 6+ hours of direct sunlight daily. Ideal for bright flowers, shrubs, and sun-loving
+                                herbs.</p>
+                        </div>
+                        <div class="progress animated-bar mt-5" style="height: 12px; width: 70%;">
+                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3 d-flex flex-column">
+                <div class="img-wrapper flex-fill mb-3">
+                    <img src="img/part-shade.jpg" alt="Partial Sun" class="img-fluid">
+                    <div class="overlay-text-container">
+                        <div class="overlay-text">
+                            <h3>Part Shade / Partial Sun</h3>
+                            <p>Receives 3–6 hours of sunlight. Great for plants that enjoy some sun but need protection
+                                from intense heat.</p>
+                        </div>
+                        <div class="progress animated-bar mt-5" style="height: 12px; width: 70%;">
+                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="img-wrapper rounded-bottom-right flex-fill">
+                    <img src="img/shaded.jpg" alt="Full Shade" class="img-fluid"
+                        style="border-bottom-right-radius: 30%;">
+                    <div class="overlay-text-container">
+                        <div class="overlay-text">
+                            <h3>Full Shade</h3>
+                            <p>Gets less than 3 hours of direct sun. Perfect for cool, low-light areas under trees or
+                                beside buildings.</p>
+                        </div>
+                        <div class="progress animated-bar mt-5" style="height: 12px; width: 70%;">
+                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Enviro-info section 3 end -->
+
+    <!-- Enviro-info section 4 start -->
+    <section class="enviro4 py-5 mt-5">
+        <div class="container text-center enviro4-content">
+            <h2 class="enviro-title mb-5">Different Types of Soil</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="enviro-card">
+                        <img src="img/sandy-soil2.jpg" class="img-fluid" alt="Sandy Soil">
+                        <span class="enviro-number">1</span>
+                        <h5>Sandy Soil</h5>
+                        <p>Gritty, drains fast, and warms quickly. It loses nutrients easily, so only drought-tolerant
+                            plants grow well unless enriched with organic matter.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="enviro-card">
+                        <img src="img/clay-soil2.jpg" class="img-fluid" alt="Clay Soil">
+                        <span class="enviro-number">2</span>
+                        <h5>Clay soil</h5>
+                        <p>Heavy, sticky, and slow-draining but nutrient-rich. It can compact easily, so plants must
+                            handle wet conditions and tougher root growth.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="enviro-card">
+                        <img src="img/loam-soil2.jpg" class="img-fluid" alt="Loamy Soil">
+                        <span class="enviro-number">3</span>
+                        <h5>Loamy Soil</h5>
+                        <p>A balanced mix of sand, silt, and clay. Drains well, holds nutrients, and supports most
+                            plants—ideal for parks and gardens.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="enviro-card">
+                        <img src="img/silty-soil.jpg" class="img-fluid" alt="Silty Soil">
+                        <span class="enviro-number">4</span>
+                        <h5>Silty Soil</h5>
+                        <p>Smooth and fine, holds moisture better than sand but drains more easily than clay. Fertile
+                            but can compact if stepped on too much.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Enviro-info section 4 end -->
+
+    <!-- Enviro-info section 5 start -->
+    <section class="ground-section py-5">
+        <div class="container" style="padding: 80px;">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6" style="margin-top: 125px;">
+                    <div class="image-grid">
+                        <img src="img/ground.jpg" class="img-main" alt="Wet ground">
+                        <img src="img/dry.jpg" class="img-small top" alt="Dry ground">
+                        <img src="img/waterlogged.jpg" class="img-small bottom" alt="Waterlogged ground">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <span class="section-tag">Explore more about</span>
+                    <h2 class="fw-bold mb-4">Moisture Levels</h2>
+
+                    <div class="info-list">
+                        <div class="info-box">
+                            <div class="icon">
+                                <i class="fa-solid fa-sun" title="Dry"></i>
+                            </div>
+                            <div>
+                                <h6>Dry</h6>
+                                <p>Drains quickly and doesn’t hold much water. Only drought-resistant plants thrive,
+                                    often with deep roots to reach moisture.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="icon">
+                                <i class="fa-solid fa-cloud-sun" title="Moderate"></i>
+                            </div>
+                            <div>
+                                <h6>Moderate</h6>
+                                <p>Stays evenly moist without becoming soggy. Supports most common park plants and needs
+                                    regular but not heavy watering.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="icon">
+                                <i class="fa-solid fa-cloud-rain" title="Moist"></i>
+                            </div>
+                            <div>
+                                <h6>Moist</h6>
+                                <p>Remains damp for long periods and suits plants that enjoy consistent hydration, often
+                                    found in shaded or low areas.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="icon">
+                                <i class="fa-solid fa-water" title="Wet"></i>
+                            </div>
+                            <div>
+                                <h6>Wet/Waterlogged</h6>
+                                <p>Soil stays soaked and drains very slowly. Only wetland or aquatic plants can survive
+                                    here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Enviro-info section 5 end -->
+
+    <!-- Enviro-info section 6 start -->
+    <section class="water-section py-5">
+        <div class="container" style="padding: 50px;">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <h2 class="water-title">Ways to Access Water</h2>
+                    <div class="water-list">
+                        <div class="water-box">
+                            <h4>Rain-fed</h4>
+                            <p>Plants rely solely on natural rainfall and must tolerate dry periods and seasonal
+                                changes.</p>
+                        </div>
+
+                        <div class="water-box">
+                            <h4>Groundwater-fed</h4>
+                            <p>Plants get water from deep underground sources, so they often grow deep roots to reach
+                                stable moisture.</p>
+                        </div>
+
+                        <div class="water-box">
+                            <h4>Irrigation-fed</h4>
+                            <p>Watered using sprinklers, hoses, or drip systems, allowing controlled watering for plants
+                                that need regular moisture.</p>
+                        </div>
+
+                        <div class="water-box">
+                            <h4>Surface Water</h4>
+                            <p>Plants grow near ponds or streams where soil stays damp from nearby water, perfect for
+                                moisture-loving species.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="polaroid-grid">
+                        <div class="polaroid-card rotate-left">
+                            <img src="img/watering.png" alt="Watering plants" class="Watering normally">
+                            <span>Watering Plants</span>
+                            <img src="img/watering2.jpg" class="water-small water-small-1 mt-3" alt="Raiwater">
+                            <span>Watering</span>
+
+                        </div>
+
+                        <div class="polaroid-card rotate-right">
+                            <img src="img/surface-water.jpg" alt="Surface water">
+                            <span>Surface water</span>
+                            <img src="img/rainwater.jpg" class="water-small water-small-1 mt-3" alt="Raiwater">
+                            <span>Rain water</span>
+                        </div>
+
+                        <div class="polaroid-card rotate-small">
+                            <img src="img/water-irragration.png" class="water-small water-small-2" alt="Irrigation-fed">
+                            <span>Groundwater</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Enviro-info section 6 end -->
+
+    <!-- Choosing plants to grow section start -->
+    <section class="plants-filter-section py-5">
+        <div class="container">
+            <h2 class="section-title">Find Plants Suitable for Your Park</h2>
+
+            <div class="filter-bar">
+                <select id="sunlight-filter">
+                    <option value="">Select Sunlight</option>
+                    <option value="full-sun">Full Sun</option>
+                    <option value="partial-sun">Partial Sun</option>
+                    <option value="shade">Shade</option>
+                </select>
+
+                <select id="soil-filter">
+                    <option value="">Select Soil Type</option>
+                    <option value="sandy">Sandy</option>
+                    <option value="loamy">Loamy</option>
+                    <option value="clay">Clay</option>
+                </select>
+
+                <select id="water-filter">
+                    <option value="">Select Water Access</option>
+                    <option value="rain-fed">Rain-fed</option>
+                    <option value="groundwater">Groundwater-fed</option>
+                    <option value="irrigation-fed">Irrigation-fed</option>
+                    <option value="surface">Surface Water</option>
+                </select>
+
+                <select id="moisture-filter">
+                    <option value="">Select Moisture</option>
+                    <option value="dry">Dry</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="moist">Moist</option>
+                    <option value="wet">Wet/Waterlogged</option>
+                </select>
+            </div>
+
+            <div class="plants-grid">
+                <div class="plant-card" data-sunlight="full-sun" data-soil="sandy" data-water="rain-fed"
+                    data-moisture="dry">
+                    <img src="img/cactus.png" alt="Cactus">
+                    <h4>Cactus</h4>
+                    <p>Thrives in dry, sunny, sandy soil with minimal water.</p>
+                    <button class="learn-btn"><a href="plant_page1.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="partial-sun" data-soil="loamy" data-water="irrigation-fed"
+                    data-moisture="moderate">
+                    <img src="img/lavendar.png" alt="Lavender">
+                    <h4>Lavender</h4>
+                    <p>Prefers moderate sunlight, loamy soil, and regular watering.</p>
+                    <button class="learn-btn"><a href="plant_page3.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="shade" data-soil="loamy" data-water="groundwater"
+                    data-moisture="moist">
+                    <img src="img/Fern.jpg" alt="Fern">
+                    <h4>Fern</h4>
+                    <p>Loves shaded, damp areas with loamy soil and groundwater access.</p>
+                    <button class="learn-btn"><a href="plant_page1.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="full-sun" data-soil="clay" data-water="surface"
+                    data-moisture="wet">
+                    <img src="img2/water_lily.png" alt="Water Lily">
+                    <h4>Water Lily</h4>
+                    <p>Grows in full sun, wet clay soil, and surface water.</p>
+                    <button class="learn-btn"><a href="plant_page5.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="full-sun" data-soil="sandy" data-water="rain-fed"
+                    data-moisture="dry">
+                    <img src="img/aloe-vera.png" alt="Aloe Vera">
+                    <h4>Aloe Vera</h4>
+                    <p>Needs hot, dry sunlight and sandy soil; drought-resistant and low-maintenance.</p>
+                    <button class="learn-btn"><a href="plant_page1.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="partial-sun" data-soil="loamy" data-water="groundwater"
+                    data-moisture="moist">
+                    <img src="img2/orchid.png" alt="Orchid">
+                    <h4>Orchid</h4>
+                    <p>Thrives in partial sunlight, moist loamy soil, and groundwater-fed conditions.</p>
+                    <button class="learn-btn"><a href="plant_page4.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="full-sun" data-soil="loamy" data-water="irrigation-fed"
+                    data-moisture="moderate">
+                    <img src="img/marigold.jpg" alt="Marigold">
+                    <h4>Marigold</h4>
+                    <p>Requires full sun, moderate moisture, loamy soil, and regular watering.</p>
+                    <button class="learn-btn"><a href="plant_page2.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="shade" data-soil="clay" data-water="surface" data-moisture="wet">
+                    <img src="img/lotus.png" alt="Lotus">
+                    <h4>Lotus</h4>
+                    <p>Grows in wet clay soil, shaded or partial sun, near surface water.</p>
+                    <button class="learn-btn"><a href="plant_page5.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="full-sun" data-soil="loamy" data-water="irrigation-fed"
+                    data-moisture="moist">
+                    <img src="img2/papaya.png" alt="Papaya">
+                    <h4>Papaya</h4>
+                    <p>Prefers full sun, moist loamy soil, and regular watering; common tropical fruit in Myanmar.</p>
+                    <button class="learn-btn"><a href="plant_page2.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="partial-sun" data-soil="loamy" data-water="rain-fed"
+                    data-moisture="moderate">
+                    <img src="img/basil_plant.png" alt="Basil">
+                    <h4>Basil</h4>
+                    <p>Partial sunlight, moderately moist loamy soil, rain-fed or light watering.</p>
+                    <button class="learn-btn"><a href="plant_page3.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="full-sun" data-soil="loamy" data-water="irrigation"
+                    data-moisture="moderate">
+                    <img src="img/chili.webp" alt="Chili">
+                    <h4>Chili</h4>
+                    <p>Full sun, loamy soil, moderate moisture; requires regular watering for good fruit.</p>
+                    <button class="learn-btn"><a href="plant_page2.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="full-sun" data-soil="loamy" data-water="groundwater"
+                    data-moisture="moist">
+                    <img src="img/banana.png" alt="Banana">
+                    <h4>Banana</h4>
+                    <p>Full sun, fertile loamy soil, moist conditions; often grown using groundwater irrigation.</p>
+                    <button class="learn-btn" onclick="window.location.href='plant-details/cactus.html'">Learn
+                        More</button>
+                </div>
+
+                <div class="plant-card" data-sunlight="full-sun" data-soil="sandy" data-water="irrigation"
+                    data-moisture="moderate">
+                    <img src="img/hibiscus.png" alt="Hibiscus">
+                    <h4>Hibiscus</h4>
+                    <p>Thrives in full sun, sandy soil with moderate moisture; colorful tropical flower.</p>
+                    <button class="learn-btn"><a href="plant_page2.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="shade" data-soil="loamy" data-water="groundwater"
+                    data-moisture="moist">
+                    <img src="img1/stagorn_fern.png" alt="Staghorn Fern">
+                    <h4>Staghorn Fern</h4>
+                    <p>Loves shaded areas with moist soil and consistent groundwater.</p>
+                    <button class="learn-btn"><a href="plant_page4.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="partial-sun" data-soil="loamy" data-water="irrigation"
+                    data-moisture="moderate">
+                    <img src="img/jasmine2.png" alt="Jasmine">
+                    <h4>Jasmine</h4>
+                    <p>Partial sun, loamy soil, moderate watering; fragrant tropical flower commonly grown in Myanmar.
+                    </p>
+                    <button class="learn-btn"><a href="plant_page3.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="full-sun" data-soil="sandy" data-water="rain-fed"
+                    data-moisture="dry">
+                    <img src="img1/pineapple.png" alt="Pineapple">
+                    <h4>Pineapple</h4>
+                    <p>Full sun, sandy soil, drought-tolerant; rain-fed or occasional watering.</p>
+                    <button class="learn-btn"><a href="plant_page1.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="partial-sun" data-soil="clay" data-water="surface"
+                    data-moisture="wet">
+                    <img src="img2/water_spinach.png" alt="Water Spinach">
+                    <h4>Water Spinach</h4>
+                    <p>Partial sun, wet clay soil, grows near water; popular leafy vegetable in Myanmar.</p>
+                    <button class="learn-btn"><a href="plant_page5.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="full-sun" data-soil="loamy" data-water="groundwater"
+                    data-moisture="moderate">
+                    <img src="img2/mango2.png" alt="Mango">
+                    <h4>Mango</h4>
+                    <p>Full sun, loamy soil, moderately moist conditions; common fruit tree in tropical Myanmar.</p>
+                    <button class="learn-btn"><a href="plant_page2.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="full-sun" data-soil="sandy" data-water="rain-fed"
+                    data-moisture="moderate">
+                    <img src="img2/sweetpotato.png" alt="Sweet Potato">
+                    <h4>Sweet Potato</h4>
+                    <p>Requires full sun, sandy soil, moderate moisture; rain-fed vegetable widely grown locally.</p>
+                    <button class="learn-btn"><a href="plant_page2.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+
+                <div class="plant-card" data-sunlight="full-sun" data-soil="clay" data-water="surface"
+                    data-moisture="wet">
+                    <img src="img1/rice.png" alt="Rice">
+                    <h4>Rice</h4>
+                    <p>Full sun, wet clay soil, grown in paddies with surface water; staple crop in Myanmar.</p>
+                    <button class="learn-btn"><a href="plant_page5.html"
+                            style="text-decoration: none; color: white;">Learn More</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Choosing plants go grow section end -->
+
+    <!-- Footer section start -->
+    <div class="footer">
+        <footer class="footer-custom mt-5 pt-5 pb-3"
+            style="border-top-left-radius: 30px; border-top-right-radius: 30px;">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-2">
+                        <h5 class="fw-bold footer-headings">Explore</h5>
+                        <ul class="list-unstyled footer-list">
+                            <li><a href="index.html" class="text-decoration-none">Home</a></li>
+                            <li><a href="aboutus.HTML" class="text-decoration-none">About Us</a></li>
+                            <li><a href="#" class="text-decoration-none">GIS System</a></li>
+                            <li><a href="environmental2.html" class="text-decoration-none">Environmental layers</a>
+                            </li>
+                            <li><a href="#" class="text-decoration-none">Sustainable Planting</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2">
+                        <h5 class="fw-bold footer-headings">Park Info</h5>
+                        <ul class="list-unstyled footer-list">
+                            <li><a href="#" class="text-decoration-none">Local Park Info</a></li>
+                            <li><a href="googlemap.html" class="text-decoration-none">Google Map</a></li>
+                            <li><a href="#" class="text-decoration-none">Plant Details</a></li>
+                            <li><a href="#" class="text-decoration-none">Current Issues in Park</a></li>
+                            <li><a href="#" class="text-decoration-none">Interview with Gardeners</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2">
+                        <h5 class="fw-bold footer-headings">Community</h5>
+                        <ul class="list-unstyled footer-list">
+                            <li><a href="#" class="text-decoration-none">Sign In</a></li>
+                            <li><a href="#" class="text-decoration-none">Log in</a></li>
+                            <li><a href="review.html" class="text-decoration-none">Reviews</a></li>
+                            <li><a href="#" class="text-decoration-none">FAQ</a></li>
+                            <li><a href="reference.html" class="text-decoration-none">References</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="signtext mb-1">Sign up to news & updates</p>
+
+                        <form action="">
+                            <input type="text" id="fullName" name="fullName" placeholder="Full Name"
+                                class="mt-2 name-input" style="color: white;">
+
+                            <div class="email-box mt-3">
+                                <input type="text" id="email" name="email" placeholder="Email address"
+                                    class="email-input">
+                                <button class="signup-btn">Sign up</button>
+                            </div>
+                        </form>
+
+                        <div class="social-media mt-4">
+                            <p class="signtext">Find us on social media</p>
+                            <div class="social-icons">
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-tiktok"></i>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                        </div>
+
+                        <div class="contact-info" style="margin-top: 30px;">
+                            <p class="signtext">Get in touch</p>
+                            <div class="phone-no" style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-regular fa-address-book" style="font-size: 18px;"></i>
+                                <span style="line-height: 1; font-size: 16px;">+95 909008120</span>
+                            </div>
+                            <div class="mail mt-2" style="display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-regular fa-envelope" style="font-size: 18px;"></i>
+                                <span style="line-height: 1; font-size: 16px;">koolnarwhals.edu@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="small-message-container mt-5">
+                    <span class="small-message">&copy; 2025 Kool Narwhals - Helping you explore, plant, and protect our green spaces.</span>
+                </div>
+            </div>
+            <br>
+            <br>
+        </footer>
+        <!-- Footer section end -->
+
+        <script>
+            const sunlightFilter = document.getElementById("sunlight-filter");
+            const soilFilter = document.getElementById("soil-filter");
+            const waterFilter = document.getElementById("water-filter");
+            const moistureFilter = document.getElementById("moisture-filter");
+
+            const plantCards = document.querySelectorAll(".plant-card");
+
+            function filterPlants() {
+                const sunlightValue = sunlightFilter.value;
+                const soilValue = soilFilter.value;
+                const waterValue = waterFilter.value;
+                const moistureValue = moistureFilter.value;
+
+                plantCards.forEach(card => {
+                    const cardSunlight = card.getAttribute("data-sunlight");
+                    const cardSoil = card.getAttribute("data-soil");
+                    const cardWater = card.getAttribute("data-water");
+                    const cardMoisture = card.getAttribute("data-moisture");
+
+                    const matchesSunlight = !sunlightValue || cardSunlight.includes(sunlightValue);
+                    const matchesSoil = !soilValue || cardSoil.includes(soilValue);
+                    const matchesWater = !waterValue || cardWater.includes(waterValue);
+                    const matchesMoisture = !moistureValue || cardMoisture.includes(moistureValue);
+
+                    if (matchesSunlight && matchesSoil && matchesWater && matchesMoisture) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            sunlightFilter.addEventListener("change", filterPlants);
+            soilFilter.addEventListener("change", filterPlants);
+            waterFilter.addEventListener("change", filterPlants);
+            moistureFilter.addEventListener("change", filterPlants);
+        </script>
+</body>
+
+</html>
